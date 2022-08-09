@@ -1,0 +1,33 @@
+.button {
+  width: 70px;
+  height: 30px;
+
+  margin: 0px 7px;
+
+  background-color: transparent;
+  color: white;
+  font-size: 17px;
+  font-weight: 700;
+
+  border: none;
+
+  cursor: pointer;
+}
+
+.button:hover,
+.button:active {
+  color: rgb(255, 0, 0);
+  font-weight: 500;
+}
+
+.button:focus {
+  outline: none;
+}
+
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  color: #666666;
+  cursor: not-allowed;
+}
