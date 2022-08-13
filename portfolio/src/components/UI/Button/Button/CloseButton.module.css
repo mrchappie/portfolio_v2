@@ -1,0 +1,35 @@
+.close-button {
+  margin: 0px 7px;
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+
+  border: 2px solid white;
+  border-radius: 12px;
+
+  transition: all 0.25s ease-in-out;
+
+  cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:active {
+  color: #fff;
+  /* background-color: #fff; */
+  border-radius: 20px;
+}
+
+.close-button:focus {
+  outline: none;
+}
+
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  color: #666666;
+  cursor: not-allowed;
+}

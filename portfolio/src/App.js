@@ -1,4 +1,4 @@
-import { Fragment, useContext, useState } from 'react';
+import { Fragment, useState } from 'react';
 import Header from './components/Header/Header';
 import Nav from './components/Header/Nav/Nav';
 import About from './components/Layout/About/About';
@@ -17,8 +17,8 @@ function App() {
   // const ctx = useContext(PortfolioContext);
 
   // CHANGING PAGES LOGIC
-  const [isHomeActive, setHomeIsActive] = useState(false);
-  const [isAboutActive, setAboutIsActive] = useState(true);
+  const [isHomeActive, setHomeIsActive] = useState(true);
+  const [isAboutActive, setAboutIsActive] = useState(false);
   const [isProjectsActive, setProjectsIsActive] = useState(false);
   const [isContactActive, setContactIsActive] = useState(false);
 
@@ -56,7 +56,7 @@ function App() {
 
   return (
     <Fragment>
-      {/* {ReactDOM.createPortal(<TsParticles></TsParticles>, portalElem)} */}
+      {ReactDOM.createPortal(<TsParticles></TsParticles>, portalElem)}
       <Header>
         <Nav
           onChangeH={activeHomeHandler}

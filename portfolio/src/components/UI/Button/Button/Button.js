@@ -1,6 +1,6 @@
 import classes from './Button.module.css';
 
-const ButtonAsLink = (props) => {
+const Button = (props) => {
   return (
     <button
       className={`${classes.button} ${props.className}`}
@@ -13,4 +13,4 @@ const ButtonAsLink = (props) => {
   );
 };
 
-export default ButtonAsLink;
+export default Button;
