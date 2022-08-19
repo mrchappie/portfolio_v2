@@ -26,18 +26,6 @@ const Nav = (props) => {
     dispatch(pageActions.contact());
   };
 
-  const color5 = '#f0f';
-
-  let activeClass0;
-  let activeClass1;
-  let activeClass2;
-  let activeClass3;
-
-  if (activePage === 0) activeClass0 = `active color${activeColor}`;
-  if (activePage === 1) activeClass1 = `active color${activeColor}`;
-  if (activePage === 2) activeClass2 = `active color${activeColor}`;
-  if (activePage === 3) activeClass3 = `active color${activeColor}`;
-
   return (
     <nav className={classes.nav}>
       <div className={classes.logo}>
@@ -45,16 +33,44 @@ const Nav = (props) => {
       </div>
       <div className={classes.pages}>
         <ButtonAsLink onClick={setHomeActive}>
-          <span className={activeClass0}>Home</span>
+          <span
+            className={activePage === 0 ? 'active' : ''}
+            style={
+              activePage === 0 ? { color: activeColor } : { color: '#fff' }
+            }
+          >
+            Home
+          </span>
         </ButtonAsLink>
         <ButtonAsLink onClick={setAboutActive}>
-          <span className={activeClass1}>About</span>
+          <span
+            className={activePage === 1 ? 'active' : ''}
+            style={
+              activePage === 1 ? { color: activeColor } : { color: '#fff' }
+            }
+          >
+            About
+          </span>
         </ButtonAsLink>
         <ButtonAsLink onClick={setProjectsActive}>
-          <span className={activeClass2}>Projects</span>
+          <span
+            className={activePage === 2 ? 'active' : ''}
+            style={
+              activePage === 2 ? { color: activeColor } : { color: '#fff' }
+            }
+          >
+            Projects
+          </span>
         </ButtonAsLink>
         <ButtonAsLink onClick={setContactActive}>
-          <span className={activeClass3}>Contact</span>
+          <span
+            className={activePage === 3 ? 'active' : ''}
+            style={
+              activePage === 3 ? { color: activeColor } : { color: '#fff' }
+            }
+          >
+            Contact
+          </span>
         </ButtonAsLink>
       </div>
     </nav>

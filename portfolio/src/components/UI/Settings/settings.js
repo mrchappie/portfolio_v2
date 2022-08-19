@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import classes from './settings.module.css';
 import { colorActions } from '../../../store/color';
 
@@ -7,7 +7,7 @@ const Settings = () => {
   const [showSettings, setShowSettings] = useState(false);
 
   const dispatch = useDispatch();
-  const activeColor = useSelector((state) => state.activeColor.color);
+  //   const activeColor = useSelector((state) => state.activeColor.color);
 
   const toggleSettings = () => {
     setShowSettings(!showSettings);
@@ -53,17 +53,51 @@ const Settings = () => {
         <div
           className={`${classes.colors} ${showSettings ? classes.active : ''}`}
         >
-          <div className={classes.color} onClick={color0}>
-            {activeColor}
-          </div>
-          <div className={classes.color} onClick={color1}></div>
-          <div className={classes.color} onClick={color2}></div>
-          <div className={classes.color} onClick={color3}></div>
-          <div className={classes.color} onClick={color4}></div>
-          <div className={classes.color} onClick={color5}></div>
-          <div className={classes.color} onClick={color6}></div>
-          <div className={classes.color} onClick={color7}></div>
-          <div className={classes.color} onClick={color8}></div>
+          <div
+            className={classes.color}
+            onClick={color0}
+            style={{ backgroundColor: '#f00' }}
+          ></div>
+          <div
+            className={classes.color}
+            onClick={color1}
+            style={{ backgroundColor: '#ffa500' }}
+          ></div>
+          <div
+            className={classes.color}
+            onClick={color2}
+            style={{ backgroundColor: '#ff0' }}
+          ></div>
+          <div
+            className={classes.color}
+            onClick={color3}
+            style={{ backgroundColor: '#0f0' }}
+          ></div>
+          <div
+            className={classes.color}
+            onClick={color4}
+            style={{ backgroundColor: '#00f' }}
+          ></div>
+          <div
+            className={classes.color}
+            onClick={color5}
+            style={{ backgroundColor: '#f0f' }}
+          ></div>
+          <div
+            className={classes.color}
+            onClick={color6}
+            style={{ backgroundColor: '#fff' }}
+          ></div>
+          <div
+            className={classes.color}
+            onClick={color7}
+            style={{ backgroundColor: '#66fcf1' }}
+          ></div>
+          <div
+            className={classes.color}
+            onClick={color8}
+            style={{ backgroundColor: '#eae7dc' }}
+          ></div>
         </div>
       )}
     </div>

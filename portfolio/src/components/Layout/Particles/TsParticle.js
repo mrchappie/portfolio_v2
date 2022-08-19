@@ -3,8 +3,11 @@ import { loadFull } from 'tsparticles';
 import { useCallback } from 'react';
 
 import classes from './TsParticle.module.css';
+import { useSelector } from 'react-redux';
 
 const TsParticles = () => {
+  const activeColor = useSelector((state) => state.activeColor.color);
+
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -54,7 +57,7 @@ const TsParticles = () => {
         },
         particles: {
           color: {
-            value: '#fff',
+            value: activeColor,
           },
           links: {
             color: '#fff',

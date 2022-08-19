@@ -4,8 +4,10 @@ import Card from '../../UI/Card/Card';
 import Button from '../../UI/Button/Button/Button';
 import Skills from './Skills/Skills';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const About = () => {
+  const activeColor = useSelector((state) => state.activeColor.color);
   const [isLearMoreActive, setLearMoreActive] = useState(false);
 
   const setLearMoreActiveHandler = () => {
@@ -25,7 +27,7 @@ const About = () => {
           </Card>
           <Card className={classes.profile}>
             <div className={classes.name}>
-              Alexandru <span>BOSCU</span>
+              Alexandru <span style={{ color: activeColor }}>BOSCU</span>
             </div>
             <div className={classes.job}>WEB DEVELOPER</div>
             <hr />
@@ -44,7 +46,12 @@ const About = () => {
                 numquam veniam aspernatur.
               </p>
             </div>
-            <Button onClick={setLearMoreActiveHandler}>Learn More</Button>
+            <Button
+              onClick={setLearMoreActiveHandler}
+              style={{ backgroundColor: activeColor }}
+            >
+              Learn More
+            </Button>
           </Card>
         </div>
       )}

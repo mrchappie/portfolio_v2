@@ -3,8 +3,11 @@ import Button from '../../../UI/Button/Button/Button';
 import CloseButton from '../../../UI/Button/Button/CloseButton';
 import classes from './Skills.module.css';
 import profileImage from '../../../../assets/profile_image.png';
+import { useSelector } from 'react-redux';
 
 const Skills = (props) => {
+  const activeColor = useSelector((state) => state.activeColor.color);
+
   return (
     <Fragment>
       <div className={classes.more}>
@@ -14,7 +17,7 @@ const Skills = (props) => {
               <img src={profileImage} alt="Marian Alexandru Boscu" />
             </div>
             <div className={classes.name}>
-              Alexandru <span>BOSCU</span>
+              Alexandru <span style={{ color: activeColor }}>BOSCU</span>
             </div>
             <div className={classes.job}>WEB DEVELOPER</div>
           </div>
@@ -28,7 +31,9 @@ const Skills = (props) => {
             <div className={classes.email}>boscu20@gmail.com</div>
           </div>
           <div className={classes.bottom}>
-            <Button>Download CV</Button>
+            <Button style={{ backgroundColor: activeColor }}>
+              Download CV
+            </Button>
           </div>
         </div>
         <div className={classes.right}>
@@ -38,7 +43,7 @@ const Skills = (props) => {
           <div className={classes['right-content']}>
             <div className={classes['about-me']}>
               <h2>
-                About <span>Me</span>
+                About <span style={{ color: activeColor }}>Me</span>
               </h2>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
@@ -50,7 +55,7 @@ const Skills = (props) => {
             </div>
             <div className={classes.services}>
               <h2>
-                Provided <span>Services</span>
+                Provided <span style={{ color: activeColor }}>Services</span>
               </h2>
               <ul>
                 <li>Website Development</li>
@@ -61,7 +66,7 @@ const Skills = (props) => {
             </div>
             <div className={classes.programming}>
               <h2>
-                Programming <span>Skills</span>
+                Programming <span style={{ color: activeColor }}>Skills</span>
               </h2>
               <ul>
                 <li>Website Development</li>
@@ -72,7 +77,7 @@ const Skills = (props) => {
             </div>
             <div className={classes.language}>
               <h2>
-                Language <span>Skills</span>
+                Language <span style={{ color: activeColor }}>Skills</span>
               </h2>
               <ul>
                 <li>Website Development</li>
@@ -83,7 +88,7 @@ const Skills = (props) => {
             </div>
             <div className={classes.education}>
               <h2>
-                Education <span>Timeline</span>
+                Education <span style={{ color: activeColor }}>Timeline</span>
               </h2>
               <ul>
                 <li>Website Development</li>
@@ -94,7 +99,7 @@ const Skills = (props) => {
             </div>
             <div className={classes.work}>
               <h2>
-                Working <span>Timeline</span>
+                Working <span style={{ color: activeColor }}>Timeline</span>
               </h2>
               <ul>
                 <li>Website Development</li>

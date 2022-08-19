@@ -12,6 +12,7 @@
 
   width: 50px;
   transition: right 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .settings button.active {
@@ -43,4 +44,6 @@
 
   background-color: white;
   margin: 10px;
+
+  cursor: pointer;
 }

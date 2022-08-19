@@ -1,37 +1,37 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { color: 5 };
+const initialState = { color: '#f00' };
 
 const activeColorSlice = createSlice({
   name: 'color',
   initialState,
   reducers: {
     color0(state) {
-      state.color = 0;
+      state.color = '#f00';
     },
     color1(state) {
-      state.color = 1;
+      state.color = '#ffa500';
     },
     color2(state) {
-      state.color = 2;
+      state.color = '#ff0';
     },
     color3(state) {
-      state.color = 3;
+      state.color = '#0f0';
     },
     color4(state) {
-      state.color = 4;
+      state.color = '#00f';
     },
     color5(state) {
-      state.color = 5;
+      state.color = '#f0f';
     },
     color6(state) {
-      state.color = 6;
+      state.color = '#fff';
     },
     color7(state) {
-      state.color = 7;
+      state.color = '#66fcf1';
     },
     color8(state) {
-      state.color = 8;
+      state.color = '#eae7dc';
     },
   },
 });
