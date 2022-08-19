@@ -18,5 +18,41 @@
 }
 
 .nav button span[class^='active'] {
-  color: red;
+  color: #f00;
+}
+
+.color0 {
+  color: #f00;
+}
+
+.color1 {
+  color: #ffa500;
+}
+
+.color2 {
+  color: #ff0;
+}
+
+.color3 {
+  color: #0f0;
+}
+
+.color4 {
+  color: #00f;
+}
+
+.color5 {
+  color: #f0f;
+}
+
+.color6 {
+  color: #fff;
+}
+
+.color7 {
+  color: #66fcf1;
+}
+
+.color8 {
+  color: #eae7dc;
 }

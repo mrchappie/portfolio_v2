@@ -12,7 +12,7 @@ const About = () => {
     setLearMoreActive(true);
   };
 
-  const removeLearMoreActiveHandler = () => {
+  const removeLearMoreHandler = () => {
     setLearMoreActive(false);
   };
 
@@ -49,7 +49,7 @@ const About = () => {
         </div>
       )}
       {isLearMoreActive && (
-        <Skills onChangeActive={removeLearMoreActiveHandler}></Skills>
+        <Skills onChangeActive={removeLearMoreHandler}></Skills>
       )}
     </div>
   );

@@ -1,75 +1,37 @@
-import { Fragment, useState } from 'react';
+import { Fragment } from 'react';
+import { useSelector } from 'react-redux';
+
 import Header from './components/Header/Header';
 import Nav from './components/Header/Nav/Nav';
 import About from './components/Layout/About/About';
 import Contact from './components/Layout/Contact/Contact';
 import Home from './components/Layout/Home/Home';
 import Projects from './components/Layout/Projects/Projects';
+import Settings from './components/UI/Settings/settings';
 // import PortfolioContext from './context/portfolio-context';
 // import PortProvider from './context/PortProvider';
-import TsParticles from './components/Layout/Particles/TsParticle';
+// import TsParticles from './components/Layout/Particles/TsParticle';
 
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 
 function App() {
-  const portalElem = document.getElementById('particles-bg');
-
-  // const ctx = useContext(PortfolioContext);
+  // const portalElem = document.getElementById('particles-bg');
 
   // CHANGING PAGES LOGIC
-  const [isHomeActive, setHomeIsActive] = useState(true);
-  const [isAboutActive, setAboutIsActive] = useState(false);
-  const [isProjectsActive, setProjectsIsActive] = useState(false);
-  const [isContactActive, setContactIsActive] = useState(false);
-
-  const activeHomeHandler = () => {
-    console.log('0');
-    setHomeIsActive(true);
-    setAboutIsActive(false);
-    setProjectsIsActive(false);
-    setContactIsActive(false);
-  };
-
-  const activeAboutHandler = () => {
-    setHomeIsActive(false);
-    setAboutIsActive(true);
-    setProjectsIsActive(false);
-    setContactIsActive(false);
-    console.log('1');
-  };
-
-  const activeProjectsHandler = () => {
-    setHomeIsActive(false);
-    setAboutIsActive(false);
-    setProjectsIsActive(true);
-    setContactIsActive(false);
-    console.log('2');
-  };
-
-  const activeContactHandler = () => {
-    setHomeIsActive(false);
-    setAboutIsActive(false);
-    setProjectsIsActive(false);
-    setContactIsActive(true);
-    console.log('3');
-  };
+  const activePage = useSelector((state) => state.activePage.active);
 
   return (
     <Fragment>
-      {ReactDOM.createPortal(<TsParticles></TsParticles>, portalElem)}
+      {/* {ReactDOM.createPortal(<TsParticles></TsParticles>, portalElem)} */}
       <Header>
-        <Nav
-          onChangeH={activeHomeHandler}
-          onChangeA={activeAboutHandler}
-          onChangeP={activeProjectsHandler}
-          onChangeC={activeContactHandler}
-        ></Nav>
+        <Nav></Nav>
       </Header>
       <main>
-        {isHomeActive && <Home></Home>}
-        {isAboutActive && <About></About>}
-        {isProjectsActive && <Projects></Projects>}
-        {isContactActive && <Contact></Contact>}
+        <Settings></Settings>
+        {activePage === 0 && <Home></Home>}
+        {activePage === 1 && <About></About>}
+        {activePage === 2 && <Projects></Projects>}
+        {activePage === 3 && <Contact></Contact>}
       </main>
     </Fragment>
   );

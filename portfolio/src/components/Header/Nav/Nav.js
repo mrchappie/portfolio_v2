@@ -1,11 +1,42 @@
 import classes from './Nav.module.css';
 import logo from '../../../assets/robot.png';
 import ButtonAsLink from '../../UI/Button/ButtonAsLink/ButtonAsLink';
-// import { useContext, useState } from 'react';
-// import PortfolioContext from '../../../context/portfolio-context';
+import { useDispatch } from 'react-redux';
+import { pageActions } from '../../../store/active-page';
+import { useSelector } from 'react-redux';
 
 const Nav = (props) => {
-  // const ctx = useContext(PortfolioContext);
+  const dispatch = useDispatch();
+  const activePage = useSelector((state) => state.activePage.active);
+  const activeColor = useSelector((state) => state.activeColor.color);
+
+  const setHomeActive = () => {
+    dispatch(pageActions.home());
+  };
+
+  const setAboutActive = () => {
+    dispatch(pageActions.about());
+  };
+
+  const setProjectsActive = () => {
+    dispatch(pageActions.projects());
+  };
+
+  const setContactActive = () => {
+    dispatch(pageActions.contact());
+  };
+
+  const color5 = '#f0f';
+
+  let activeClass0;
+  let activeClass1;
+  let activeClass2;
+  let activeClass3;
+
+  if (activePage === 0) activeClass0 = `active color${activeColor}`;
+  if (activePage === 1) activeClass1 = `active color${activeColor}`;
+  if (activePage === 2) activeClass2 = `active color${activeColor}`;
+  if (activePage === 3) activeClass3 = `active color${activeColor}`;
 
   return (
     <nav className={classes.nav}>
@@ -13,17 +44,17 @@ const Nav = (props) => {
         <img src={logo} alt="robot logo" />
       </div>
       <div className={classes.pages}>
-        <ButtonAsLink onClick={props.onChangeH}>
-          <span className={props.onChangeH ? 'active' : ''}>Home</span>
+        <ButtonAsLink onClick={setHomeActive}>
+          <span className={activeClass0}>Home</span>
         </ButtonAsLink>
-        <ButtonAsLink onClick={props.onChangeA}>
-          <span className={props.onChangeA ? 'active' : ''}>About</span>
+        <ButtonAsLink onClick={setAboutActive}>
+          <span className={activeClass1}>About</span>
         </ButtonAsLink>
-        <ButtonAsLink onClick={props.onChangeP}>
-          <span>Projects</span>
+        <ButtonAsLink onClick={setProjectsActive}>
+          <span className={activeClass2}>Projects</span>
         </ButtonAsLink>
-        <ButtonAsLink onClick={props.onChangeC}>
-          <span>Contact</span>
+        <ButtonAsLink onClick={setContactActive}>
+          <span className={activeClass3}>Contact</span>
         </ButtonAsLink>
       </div>
     </nav>
