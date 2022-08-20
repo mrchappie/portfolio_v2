@@ -8,8 +8,7 @@ import Contact from './components/Layout/Contact/Contact';
 import Home from './components/Layout/Home/Home';
 import Projects from './components/Layout/Projects/Projects';
 import Settings from './components/UI/Settings/settings';
-// import PortfolioContext from './context/portfolio-context';
-// import PortProvider from './context/PortProvider';
+
 import TsParticles from './components/Layout/Particles/TsParticle';
 
 import ReactDOM from 'react-dom';
@@ -17,7 +16,6 @@ import ReactDOM from 'react-dom';
 function App() {
   const portalElem = document.getElementById('particles-bg');
 
-  // CHANGING PAGES LOGIC
   const activePage = useSelector((state) => state.activePage.active);
 
   return (
