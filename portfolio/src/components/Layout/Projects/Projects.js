@@ -1,16 +1,15 @@
-import { Carousel } from 'react-responsive-carousel';
 import classes from './Projects.module.css';
-// import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
+import Carousel from '../../UI//Carousel/Carousel';
+// import { useSelector } from 'react-redux';
+// import { useDispatch } from 'react-redux';
+// import { slideActions } from '../../../store/carousel-slide';
 
 const Projects = () => {
+  // const activeSlide = useSelector((state) => state.activeSlide.activeSlide);
+
   return (
     <div className={classes['projects-container']}>
-      <Carousel>
-        <div className={classes.project}>Project 1</div>
-        <div className={classes.project}>Project 1</div>
-        <div className={classes.project}>Project 1</div>
-        <div className={classes.project}>Project 1</div>
-      </Carousel>
+      <Carousel></Carousel>
     </div>
   );
 };

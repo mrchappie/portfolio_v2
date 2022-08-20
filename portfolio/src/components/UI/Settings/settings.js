@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import classes from './settings.module.css';
 import { colorActions } from '../../../store/color';
+import SettingsIcon from '../Icons/SettingsIcon';
 
 const Settings = () => {
   const [showSettings, setShowSettings] = useState(false);
@@ -47,11 +48,18 @@ const Settings = () => {
         onClick={toggleSettings}
         className={showSettings ? `${classes.active}` : ''}
       >
-        Open
+        <span>
+          <SettingsIcon></SettingsIcon>
+        </span>
       </button>
       {showSettings && (
         <div
           className={`${classes.colors} ${showSettings ? classes.active : ''}`}
+          // style={
+          //   showSettings
+          //     ? { transform: `translateX(${0}px)` }
+          //     : { transform: `translateX(${150}px)` }
+          // }
         >
           <div
             className={classes.color}

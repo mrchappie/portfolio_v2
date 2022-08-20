@@ -1,0 +1,32 @@
+.slide {
+  width: 600px;
+  height: 600px;
+  padding: 5px;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateX(0);
+
+  /* background-color: red; */
+
+  transition: transform 0.75s ease-in-out;
+}
+
+.slide .image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide .image p {
+  position: absolute;
+  bottom: 0;
+
+  color: #fff;
+}

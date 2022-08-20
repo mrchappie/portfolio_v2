@@ -1,9 +1,15 @@
 import classes from './Home.module.css';
 import Button from '../../UI/Button/Button/Button';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { pageActions } from '../../../store/active-page';
 
 const Home = () => {
   const activeColor = useSelector((state) => state.activeColor.color);
+  const dispatch = useDispatch();
+
+  const setActivePage = () => {
+    dispatch(pageActions.contact());
+  };
 
   return (
     <div className={classes.home}>
@@ -11,7 +17,9 @@ const Home = () => {
         Marian Alexandru <span style={{ color: activeColor }}>BOSCU</span>
       </div>
       <div className={classes.job}>WEB DEVELOPER</div>
-      <Button style={{ backgroundColor: activeColor }}>Get in Touch</Button>
+      <Button onClick={setActivePage} style={{ backgroundColor: activeColor }}>
+        Get in Touch
+      </Button>
     </div>
   );
 };
