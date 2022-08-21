@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import Header from './components/Header/Header';
@@ -8,10 +8,13 @@ import Contact from './components/Layout/Contact/Contact';
 import Home from './components/Layout/Home/Home';
 import Projects from './components/Layout/Projects/Projects';
 import Settings from './components/UI/Settings/settings';
+// import SmallScreen from './components/UI/SmallScreen/SmallScreen';
 
 // import TsParticles from './components/Layout/Particles/TsParticle';
 
 // import ReactDOM from 'react-dom';
+// import { useEffect } from 'react';
+// import { useCallback } from 'react';
 
 function App() {
   // const portalElem = document.getElementById('particles-bg');
@@ -21,6 +24,7 @@ function App() {
   return (
     <Fragment>
       {/* {ReactDOM.createPortal(<TsParticles></TsParticles>, portalElem)} */}
+      {/* {ReactDOM.createPortal(<SmallScreen></SmallScreen>, portalElem)} */}
       <Header>
         <Nav></Nav>
       </Header>

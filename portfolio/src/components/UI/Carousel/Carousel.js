@@ -7,36 +7,43 @@ import { useEffect, useCallback } from 'react';
 import LeftArrow from '../Icons/LeftArrow';
 import RightArrow from '../Icons/RightArrow';
 
+import project0 from '../../../assets/project_1.png';
+import project1 from '../../../assets/project_2.png';
+import project2 from '../../../assets/project_3.png';
+import project3 from '../../../assets/project_4.png';
+import project4 from '../../../assets/project_5.png';
+
 const carouselContent = [
   {
     id: 0,
-    name: 'Project 1',
+    name: 'Informations About Movies',
     description: 'Project name / short description!',
-    url: 'https://picsum.photos/590',
+    url: project0,
   },
   {
     id: 1,
-    name: 'Project 2',
+
+    name: 'My Resume',
     description: 'Project name / short description!',
-    url: 'https://picsum.photos/590',
+    url: project4,
   },
   {
     id: 2,
-    name: 'Project 3',
+    name: 'Weather App',
     description: 'Project name / short description!',
-    url: 'https://picsum.photos/590',
+    url: project2,
   },
   {
     id: 3,
-    name: 'Project 4',
+    name: 'Tic Tac Toe: Alien Edition',
     description: 'Project name / short description!',
-    url: 'https://picsum.photos/590',
+    url: project3,
   },
   {
     id: 4,
-    name: 'Project 5',
+    name: 'Dad Jokes',
     description: 'Project name / short description!',
-    url: 'https://picsum.photos/590',
+    url: project1,
   },
 ];
 

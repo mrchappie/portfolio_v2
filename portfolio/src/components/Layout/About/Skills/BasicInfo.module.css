@@ -1,0 +1,61 @@
+/* LEFT TOP */
+
+.left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px solid grey;
+  color: #fff;
+}
+
+.left .top {
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.left .top .profile-image {
+  width: 150px;
+  height: 150px;
+}
+
+.left .top .profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+/* LEFT MIDDLE */
+.left .middle {
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.left .middle > div {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid grey;
+}
+
+/* LEFT BOTTOM */
+
+.left .bottom {
+  width: 90%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  justify-content: flex-start;
+}

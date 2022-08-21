@@ -1,9 +1,8 @@
 import { Fragment } from 'react';
-import Button from '../../../UI/Button/Button/Button';
 import CloseButton from '../../../UI/Button/Button/CloseButton';
 import classes from './Skills.module.css';
-import profileImage from '../../../../assets/profile_image.png';
 import { useSelector } from 'react-redux';
+import BasicInfo from './BasicInfo';
 
 const Skills = (props) => {
   const activeColor = useSelector((state) => state.activeColor.color);
@@ -11,102 +10,83 @@ const Skills = (props) => {
   return (
     <Fragment>
       <div className={classes.more}>
+        <CloseButton className={classes.btn} onClick={props.onChangeActive}>
+          X
+        </CloseButton>
         <div className={classes.left}>
-          <div className={classes.top}>
-            <div className={classes['profile-image']}>
-              <img src={profileImage} alt="Marian Alexandru Boscu" />
-            </div>
-            <div className={classes.name}>
-              Alexandru <span style={{ color: activeColor }}>BOSCU</span>
-            </div>
-            <div className={classes.job}>WEB DEVELOPER</div>
-          </div>
-          <div className={classes.middle}>
-            <div className={classes['name-classic']}>
-              Marian Alexandru Boscu
-            </div>
-            <div className={classes.birth}>24.12.1998</div>
-            <div className={classes.address}>Bucharest, ROMANIA</div>
-            <div className={classes.phone}>0771558180</div>
-            <div className={classes.email}>boscu20@gmail.com</div>
-          </div>
-          <div className={classes.bottom}>
-            <Button style={{ backgroundColor: activeColor }}>
-              Download CV
-            </Button>
-          </div>
+          <BasicInfo></BasicInfo>
         </div>
-        <div className={classes.right}>
-          <CloseButton className={classes.btn} onClick={props.onChangeActive}>
-            X
-          </CloseButton>
-          <div className={classes['right-content']}>
-            <div className={classes['about-me']}>
-              <h2>
-                About <span style={{ color: activeColor }}>Me</span>
-              </h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-                velit, ipsa totam facere nostrum cumque dolorem laborum neque
-                corrupti amet explicabo repudiandae aliquid provident, sequi non
-                beatae tenetur impedit similique harum officia. Earum animi
-                doloremque exercitationem, quos voluptate libero? Tempora!
-              </p>
-            </div>
-            <div className={classes.services}>
-              <h2>
-                Provided <span style={{ color: activeColor }}>Services</span>
-              </h2>
-              <ul>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-              </ul>
-            </div>
-            <div className={classes.programming}>
-              <h2>
-                Programming <span style={{ color: activeColor }}>Skills</span>
-              </h2>
-              <ul>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-              </ul>
-            </div>
-            <div className={classes.language}>
-              <h2>
-                Language <span style={{ color: activeColor }}>Skills</span>
-              </h2>
-              <ul>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-              </ul>
-            </div>
-            <div className={classes.education}>
-              <h2>
-                Education <span style={{ color: activeColor }}>Timeline</span>
-              </h2>
-              <ul>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-              </ul>
-            </div>
-            <div className={classes.work}>
-              <h2>
-                Working <span style={{ color: activeColor }}>Timeline</span>
-              </h2>
-              <ul>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-                <li>Website Development</li>
-              </ul>
+        <div className={classes['right-scroll']}>
+          <div className={classes.right}>
+            <div className={classes['right-content']}>
+              <div className={classes['about-me']}>
+                <h2>
+                  About <span style={{ color: activeColor }}>Me</span>
+                </h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus velit, ipsa totam facere nostrum cumque dolorem
+                  laborum neque corrupti amet explicabo repudiandae aliquid
+                  provident, sequi non beatae tenetur impedit similique harum
+                  officia. Earum animi doloremque exercitationem, quos voluptate
+                  libero? Tempora!
+                </p>
+              </div>
+              <div className={classes.services}>
+                <h2>
+                  Provided <span style={{ color: activeColor }}>Services</span>
+                </h2>
+                <ul>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                </ul>
+              </div>
+              <div className={classes.programming}>
+                <h2>
+                  Programming <span style={{ color: activeColor }}>Skills</span>
+                </h2>
+                <ul>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                </ul>
+              </div>
+              <div className={classes.language}>
+                <h2>
+                  Language <span style={{ color: activeColor }}>Skills</span>
+                </h2>
+                <ul>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                </ul>
+              </div>
+              <div className={classes.education}>
+                <h2>
+                  Education <span style={{ color: activeColor }}>Timeline</span>
+                </h2>
+                <ul>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                </ul>
+              </div>
+              <div className={classes.work}>
+                <h2>
+                  Working <span style={{ color: activeColor }}>Timeline</span>
+                </h2>
+                <ul>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                  <li>Website Development</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
