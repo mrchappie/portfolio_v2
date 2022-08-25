@@ -9,6 +9,8 @@ import Location from '../../../UI/Icons/BasicInfoIcons/locationIcon';
 import MobilePhone from '../../../UI/Icons/BasicInfoIcons/mobilePhoneIcon';
 import Mail from '../../../UI/Icons/BasicInfoIcons/mailIcon';
 
+import { ALEX_INFO } from '../../../website-info/alex-info';
+
 const BasicInfo = () => {
   const activeColor = useSelector((state) => state.activeColor.color);
 
@@ -19,26 +21,30 @@ const BasicInfo = () => {
           <img src={profileImage} alt="Marian Alexandru Boscu" />
         </div>
         <div className={classes.name}>
-          Alexandru <span style={{ color: activeColor }}>BOSCU</span>
+          {ALEX_INFO.name.firstName1}{' '}
+          <span style={{ color: activeColor }}>{ALEX_INFO.name.lastName}</span>
         </div>
-        <div className={classes.job}>WEB DEVELOPER</div>
+        <div className={classes.job}>{ALEX_INFO.about.job}</div>
       </div>
       <div className={classes.middle}>
         <div className={classes['name-classic']}>
-          <Man style={{ color: activeColor }}></Man> Marian Alexandru Boscu
+          <Man style={{ color: activeColor }}></Man> {ALEX_INFO.name.firstName1}{' '}
+          {ALEX_INFO.name.firstName2} {ALEX_INFO.name.lastName}
         </div>
         <div className={classes.birth}>
-          <Date style={{ color: activeColor }}></Date> 24.12.1998
+          <Date style={{ color: activeColor }}></Date>{' '}
+          {ALEX_INFO.about.dateOfBirth.full}
         </div>
         <div className={classes.address}>
-          <Location style={{ color: activeColor }}></Location> Bucharest,
-          ROMANIA
+          <Location style={{ color: activeColor }}></Location>{' '}
+          {ALEX_INFO.about.location.city}, {ALEX_INFO.about.location.country}
         </div>
         <div className={classes.phone}>
-          <MobilePhone style={{ color: activeColor }}></MobilePhone> 0771558180
+          <MobilePhone style={{ color: activeColor }}></MobilePhone>{' '}
+          {ALEX_INFO.about.phoneNumber}
         </div>
         <div className={classes.email}>
-          <Mail style={{ color: activeColor }}></Mail> boscu20@gmail.com
+          <Mail style={{ color: activeColor }}></Mail> {ALEX_INFO.about.email}
         </div>
       </div>
       <div className={classes.bottom}>

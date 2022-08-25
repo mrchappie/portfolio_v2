@@ -1,10 +1,11 @@
 import classes from './About.module.css';
 import profileImage from '../../../assets/profile_image.png';
-import Card from '../../UI/Card/Card';
 import Button from '../../UI/Button/Button/Button';
 import Skills from './Skills/Skills';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+
+import { ALEX_INFO } from '../../website-info/alex-info';
 
 const About = () => {
   const activeColor = useSelector((state) => state.activeColor.color);
@@ -22,29 +23,19 @@ const About = () => {
     <div className={classes.container}>
       {!isLearMoreActive && (
         <div className={classes.about}>
-          <Card className={classes['profile-image']}>
+          <div className={classes['profile-image']}>
             <img src={profileImage} alt="Marian Alexandru Boscu profile" />
-          </Card>
-          <Card className={classes.profile}>
+          </div>
+          <div className={classes.profile}>
             <div className={classes.name}>
-              Alexandru <span style={{ color: activeColor }}>BOSCU</span>
+              {ALEX_INFO.name.firstName1}{' '}
+              <span style={{ color: activeColor }}>
+                {ALEX_INFO.name.lastName}
+              </span>
             </div>
-            <div className={classes.job}>WEB DEVELOPER</div>
-            <hr />
+            <div className={classes.job}>{ALEX_INFO.about.job}</div>
             <div className={classes.description}>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
-                recusandae sit corrupti nobis nesciunt cupiditate fugiat
-                molestias dolorum possimus quos voluptatum aliquam pariatur
-                repudiandae consequuntur at itaque sequi excepturi impedit
-                doloremque, nulla quam molestiae exercitationem aliquid
-                voluptates. Molestiae eos delectus obcaecati quia dolores alias
-                dolorum, nostrum commodi? At dolorem fugit itaque, explicabo
-                amet aperiam, quod, expedita ipsum quos velit assumenda beatae
-                eius obcaecati culpa. Quo veritatis esse commodi, animi
-                assumenda at tempora libero, facere, accusantium quidem eius
-                numquam veniam aspernatur.
-              </p>
+              <p>{ALEX_INFO.about.description}</p>
             </div>
             <Button
               onClick={setLearMoreActiveHandler}
@@ -52,7 +43,7 @@ const About = () => {
             >
               Learn More
             </Button>
-          </Card>
+          </div>
         </div>
       )}
       {isLearMoreActive && (

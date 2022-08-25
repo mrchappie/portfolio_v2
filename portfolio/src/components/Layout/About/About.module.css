@@ -1,3 +1,5 @@
+@import '../../website-info/colors.css';
+
 .container {
   width: 100%;
   height: 100%;
@@ -9,20 +11,21 @@
 }
 
 .about {
-  width: 100%;
-  height: 100%;
-
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 .about .profile-image {
   width: 400px;
   height: 400px;
   margin: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 .about .profile-image img {
@@ -35,10 +38,16 @@
   height: 400px;
   margin: 20px;
 
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
-.about .name {
+.about .profile .name {
   text-transform: uppercase;
   font-size: 40px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -46,7 +55,7 @@
   color: #fff;
 }
 
-.about .job {
+.about .profile .job {
   text-transform: uppercase;
   font-size: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -54,18 +63,13 @@
   color: #fff;
 }
 
-.about span {
-  color: red;
+.about .profile span {
+  color: var(--color2);
 }
 
-.about hr {
-  border-bottom: 0px solid white;
-
-  margin: 20px 0px;
-}
-
-.about .description {
-  font-size: 17px;
+.about .profile .description {
+  text-indent: 50px;
+  font-size: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   color: #fff;

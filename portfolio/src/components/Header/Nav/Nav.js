@@ -1,8 +1,9 @@
 import classes from './Nav.module.css';
-import logo from '../../../assets/robot.png';
+// import logo from '../../../assets/robot.png';
 import ButtonAsLink from '../../UI/Button/ButtonAsLink/ButtonAsLink';
 import { useDispatch } from 'react-redux';
 import { pageActions } from '../../../store/active-page';
+import { logoActions } from '../../../store/logo-history';
 import { useSelector } from 'react-redux';
 
 const Nav = (props) => {
@@ -26,10 +27,15 @@ const Nav = (props) => {
     dispatch(pageActions.contact());
   };
 
+  const showLogoHistory = () => {
+    dispatch(logoActions.toggleLogoHistory());
+  };
+
   return (
     <nav className={classes.nav}>
       <div className={classes.logo}>
-        <img src={logo} alt="robot logo" />
+        {/* <img src={logo} alt="robot logo" /> */}
+        <h1 onClick={showLogoHistory}>chappie</h1>
       </div>
       <div className={classes.pages}>
         <ButtonAsLink onClick={setHomeActive}>

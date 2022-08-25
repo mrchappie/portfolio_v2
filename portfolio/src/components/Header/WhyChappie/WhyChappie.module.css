@@ -1,0 +1,59 @@
+.why-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.why-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 0;
+}
+
+.whychappie {
+  position: relative;
+  width: 600px;
+  height: 600px;
+
+  padding: 20px 40px;
+  color: #fff;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  z-index: 1;
+}
+
+.whychappie .headertext {
+  width: auto;
+  height: auto;
+
+  font-size: 15px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.whychappie .content {
+  width: auto;
+  height: auto;
+
+  font-size: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-indent: 60px;
+}
+
+.whychappie .button {
+  position: absolute;
+  top: 0;
+  right: -60px;
+}

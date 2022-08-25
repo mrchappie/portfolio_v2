@@ -1,3 +1,5 @@
+@import '../../../website-info/colors.css';
+
 .more {
   position: relative;
   display: flex;
@@ -5,11 +7,13 @@
 
   width: 50%;
   height: 80%;
-  background-color: #222222;
+  background-color: var(--color2);
 
   padding: 20px;
 
   border-radius: 20px;
+
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .more span {

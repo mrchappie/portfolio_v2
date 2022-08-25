@@ -4,6 +4,8 @@ import classes from './Skills.module.css';
 import { useSelector } from 'react-redux';
 import BasicInfo from './BasicInfo';
 
+import { ALEX_INFO } from '../../../website-info/alex-info';
+
 const Skills = (props) => {
   const activeColor = useSelector((state) => state.activeColor.color);
 
@@ -23,24 +25,17 @@ const Skills = (props) => {
                 <h2>
                   About <span style={{ color: activeColor }}>Me</span>
                 </h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus velit, ipsa totam facere nostrum cumque dolorem
-                  laborum neque corrupti amet explicabo repudiandae aliquid
-                  provident, sequi non beatae tenetur impedit similique harum
-                  officia. Earum animi doloremque exercitationem, quos voluptate
-                  libero? Tempora!
-                </p>
+                <p>{ALEX_INFO.about.shortDescription}</p>
               </div>
               <div className={classes.services}>
                 <h2>
                   Provided <span style={{ color: activeColor }}>Services</span>
                 </h2>
                 <ul>
-                  <li>Website Development</li>
-                  <li>Website Development</li>
-                  <li>Website Development</li>
-                  <li>Website Development</li>
+                  <li>{ALEX_INFO.about.providedServices.frontend}</li>
+                  <li>{ALEX_INFO.about.providedServices.backend}</li>
+                  <li>{ALEX_INFO.about.providedServices.design.photo}</li>
+                  <li>{ALEX_INFO.about.providedServices.design.ui}</li>
                 </ul>
               </div>
               <div className={classes.programming}>
@@ -48,10 +43,10 @@ const Skills = (props) => {
                   Programming <span style={{ color: activeColor }}>Skills</span>
                 </h2>
                 <ul>
-                  <li>Website Development</li>
-                  <li>Website Development</li>
-                  <li>Website Development</li>
-                  <li>Website Development</li>
+                  <li>{ALEX_INFO.about.programming.html}</li>
+                  <li>{ALEX_INFO.about.programming.css}</li>
+                  <li>{ALEX_INFO.about.programming.js}</li>
+                  <li>{ALEX_INFO.about.programming.react}</li>
                 </ul>
               </div>
               <div className={classes.language}>
@@ -59,10 +54,8 @@ const Skills = (props) => {
                   Language <span style={{ color: activeColor }}>Skills</span>
                 </h2>
                 <ul>
-                  <li>Website Development</li>
-                  <li>Website Development</li>
-                  <li>Website Development</li>
-                  <li>Website Development</li>
+                  <li>{ALEX_INFO.about.languages.rom}</li>
+                  <li>{ALEX_INFO.about.languages.eng}</li>
                 </ul>
               </div>
               <div className={classes.education}>
