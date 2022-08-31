@@ -6,21 +6,21 @@ const slidePosition = createSlice({
   name: 'slide',
   initialState,
   reducers: {
-    moveLeft(state) {
+    moveLeft(state, action) {
       state.activeSlide = state.activeSlide - 1;
-      state.position = state.activeSlide * -600;
+      state.position = state.activeSlide * -action.payload.width;
     },
-    moveRight(state) {
+    moveRight(state, action) {
       state.activeSlide = state.activeSlide + 1;
-      state.position = state.activeSlide * -600;
+      state.position = state.activeSlide * -action.payload.width;
     },
     goToFirst(state, action) {
-      state.activeSlide = action.payload;
-      state.position = action.payload * 600;
+      state.activeSlide = action.payload.slide;
+      state.position = action.payload.slide * action.payload.width;
     },
     goToLast(state, action) {
-      state.activeSlide = action.payload;
-      state.position = action.payload * -600;
+      state.activeSlide = action.payload.slide;
+      state.position = action.payload.slide * -action.payload.width;
     },
   },
 });

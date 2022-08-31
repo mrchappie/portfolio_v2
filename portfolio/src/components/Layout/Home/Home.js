@@ -23,7 +23,6 @@ const Home = () => {
       <cite>
         "{ALEX_INFO.about.quote.text}"
         <span style={{ color: activeColor }}>
-          {' '}
           -{ALEX_INFO.about.quote.author}
         </span>
       </cite>

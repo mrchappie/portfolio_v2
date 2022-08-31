@@ -3,7 +3,13 @@ import Slide from '../Slide/Slide';
 import { useDispatch, useSelector } from 'react-redux';
 import { slideActions } from '../../../store/carousel-slide';
 
-import { useEffect, useCallback } from 'react';
+import {
+  useEffect,
+  useCallback,
+  useState,
+  useLayoutEffect,
+  useRef,
+} from 'react';
 import LeftArrow from '../Icons/LeftArrow';
 import RightArrow from '../Icons/RightArrow';
 
@@ -55,21 +61,37 @@ const Carousel = () => {
 
   const dispatch = useDispatch();
 
+  const ref = useRef(null);
+
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+
+  useLayoutEffect(() => {
+    setWidth(ref.current.offsetWidth);
+    setHeight(ref.current.offsetHeight);
+  }, []);
+
   const moveSlideLeft = () => {
     if (activeSlide === 0) {
-      dispatch(slideActions.goToLast(carouselContent.length - 2));
+      dispatch(
+        slideActions.goToLast({
+          slide: carouselContent.length - 2,
+          width,
+          height,
+        })
+      );
     } else {
-      dispatch(slideActions.moveLeft());
+      dispatch(slideActions.moveLeft({ width, height }));
     }
   };
 
   const moveSlideRight = useCallback(() => {
     if (activeSlide === carouselContent.length - 2) {
-      dispatch(slideActions.goToFirst(0));
+      dispatch(slideActions.goToFirst({ slide: 0, width, height }));
     } else {
-      dispatch(slideActions.moveRight());
+      dispatch(slideActions.moveRight({ width, height }));
     }
-  }, [activeSlide, dispatch]);
+  }, [activeSlide, dispatch, height, width]);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -81,7 +103,8 @@ const Carousel = () => {
     };
   }, [activeSlide, moveSlideRight]);
 
-  const pos = { transform: `translateX(${position}px)` };
+  const pos = `translateX(${position}px)`;
+  // const pos = { transform: `translateX(${position}px)` };
 
   const slides = carouselContent.map((slide) => {
     return (
@@ -91,19 +114,30 @@ const Carousel = () => {
         url={slide.url}
         style={pos}
         key={slide.id}
+        slideSize={{ width, height }}
       ></Slide>
     );
   });
 
   return (
-    <div className={classes.carousel}>
-      <button onClick={moveSlideLeft} className={classes.prev}>
-        <LeftArrow style={{ color: activeColor }}></LeftArrow>
-      </button>
-      <div className={classes.carousel}>{slides}</div>
-      <button onClick={moveSlideRight} className={classes.next}>
-        <RightArrow style={{ color: activeColor }}></RightArrow>
-      </button>
+    <div className={classes.carouselContainer}>
+      <div className={classes.leftBtn}>
+        <button onClick={moveSlideLeft} className={classes.prev}>
+          <LeftArrow style={{ color: activeColor }}></LeftArrow>
+        </button>
+      </div>
+      <div className={classes.slideContainer}>
+        <div className={classes.mask}>
+          <div className={classes.carousel} ref={ref}>
+            {slides}
+          </div>
+        </div>
+      </div>
+      <div className={classes.rightBtn}>
+        <button onClick={moveSlideRight} className={classes.next}>
+          <RightArrow style={{ color: activeColor }}></RightArrow>
+        </button>
+      </div>
     </div>
   );
 };

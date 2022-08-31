@@ -1,42 +1,93 @@
-.carousel {
+.carouselContainer {
   position: relative;
+  aspect-ratio: 16/9;
+  width: 75%;
+
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  background: transparent;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.carouselContainer .slideContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  margin: 0px 10px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
   overflow: hidden;
 
-  width: 1200px;
-  height: 600px;
-
-  /* box-shadow: 0 0 30px #fff; */
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.carousel button {
-  width: 100px;
-  height: 100px;
+.carouselContainer .slideContainer .mask {
+  position: relative;
+  width: 100%;
+  height: 100%;
 
-  z-index: 100;
-  outline: none;
-  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselContainer .slideContainer .carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carouselContainer .leftBtn {
+  position: relative;
+
+  width: 100px;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  transition: transform 0.25s ease-in-out;
+}
+
+.carouselContainer .rightBtn {
+  position: relative;
+  margin-right: 0px;
+
+  width: 100px;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.4);
+
+  transition: transform 0.25s ease-in-out;
+}
+
+.carouselContainer button {
+  width: 100%;
+  height: 100%;
+
+  background-color: transparent;
   border: none;
-  color: #fff;
+
   cursor: pointer;
 }
 
-.carousel .prev {
-  position: absolute;
-  top: 50%;
-  left: 0;
-
-  transform: translateY(-50%);
-}
-
-.carousel .next {
-  position: absolute;
-  top: 50%;
-  right: 0;
-
-  transform: translateY(-50%);
+.carouselContainer .leftBtn:hover,
+.carouselContainer .leftBtn:active,
+.carouselContainer .rightBtn:hover,
+.carouselContainer .rightBtn:active {
+  transform: scale(0.97);
 }

@@ -13,8 +13,8 @@ export const ALEX_INFO = {
 
   about: {
     quote: {
-      text: `I haven’t failed. I’ve just found 10,000 ways that won’t work.`,
-      author: 'Thomas Edison',
+      text: `I am not the richest, smartest or most talented person in the world, but I succeed because I keep going and going and going.`,
+      author: ' Sylvester Stallone',
     },
     description:
       "Hy, my name is Alex, I'm a 23 years old web deveoper from Romania. It all started like a hobby, all I wanted was to make a website for myself were to have a list with all the movies that I've watched. From usig HTML and CSS to build the website and struggling to make a button work, now I am able to work with javascript and framewokrs to build amazing websites. Google was my best teacher in this journey of learning web development",

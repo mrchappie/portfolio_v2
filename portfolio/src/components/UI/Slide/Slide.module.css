@@ -1,8 +1,7 @@
 .slide {
   position: relative;
-  width: 600px;
-  height: 600px;
-  padding: 5px;
+  width: inherit;
+  height: inherit;
 
   display: flex;
   flex-direction: column;
@@ -30,9 +29,10 @@
 }
 
 .slide .image img {
-  width: calc(600px - 10px);
-  height: calc(600px - 10px);
+  width: inherit;
+  height: inherit;
   object-fit: cover;
+  align-items: center;
 
   filter: blur(1px);
 }

@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = { active: 0 };
+const initialState = { active: 2 };
 
 const activePageSlice = createSlice({
   name: 'page',
