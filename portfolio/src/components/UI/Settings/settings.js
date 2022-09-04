@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import classes from './settings.module.css';
 import { colorActions } from '../../../store/color-change';
 import SettingsIcon from '../Icons/SettingsIcon';
@@ -8,11 +8,21 @@ const Settings = () => {
   const [showSettings, setShowSettings] = useState(false);
 
   const dispatch = useDispatch();
-  //   const activeColor = useSelector((state) => state.activeColor.color);
+  const activeColor = useSelector((state) => state.activeColor.color);
 
   const toggleSettings = () => {
     setShowSettings(!showSettings);
   };
+
+  useEffect(() => {
+    const removeSettings = setTimeout(() => {
+      setShowSettings(false);
+    }, 5000);
+
+    return () => {
+      clearTimeout(removeSettings);
+    };
+  }, [activeColor]);
 
   const color0 = () => {
     dispatch(colorActions.color0());
@@ -43,24 +53,16 @@ const Settings = () => {
   };
 
   return (
-    <div className={classes.settings}>
-      <button
-        onClick={toggleSettings}
-        className={showSettings ? `${classes.active}` : ''}
-      >
+    <div
+      className={`${classes.settings} ${showSettings ? classes.active : ''}`}
+    >
+      <button onClick={toggleSettings}>
         <span>
           <SettingsIcon></SettingsIcon>
         </span>
       </button>
-      {showSettings && (
-        <div
-          className={`${classes.colors} ${showSettings ? classes.active : ''}`}
-          // style={
-          //   showSettings
-          //     ? { transform: `translateX(${0}px)` }
-          //     : { transform: `translateX(${150}px)` }
-          // }
-        >
+      {
+        <div className={classes.colors}>
           <div
             className={classes.color}
             onClick={color0}
@@ -107,7 +109,7 @@ const Settings = () => {
             style={{ backgroundColor: '#eae7dc' }}
           ></div>
         </div>
-      )}
+      }
     </div>
   );
 };

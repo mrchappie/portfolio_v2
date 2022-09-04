@@ -1,42 +1,141 @@
-.home {
+.homeContainer {
+  position: relative;
   width: 100%;
   height: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.homeContainer .home {
+  position: relative;
+  width: 70%;
+  height: 50%;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 
   color: #fff;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
-.home span {
-  color: red;
+.homeContainer .home .left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.home .name {
-  text-transform: uppercase;
-  font-size: 60px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
+.homeContainer .home .right {
+  width: 40%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.home .job {
-  text-transform: uppercase;
-  font-size: 30px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-
-  margin: 20px;
+.homeContainer .home .right img {
+  aspect-ratio: 1/1;
+  height: 100%;
 }
 
-.home cite {
-  font-size: 15px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  margin: 20px;
-
-  width: 600px;
+.homeContainer .home .left .hello {
+  position: relative;
+  width: 100%;
   height: auto;
 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.homeContainer .home .left .hello hr {
+  width: 30px;
+  position: absolute;
+}
+
+.homeContainer .home .left .hello h3 {
+  text-indent: 40px;
+}
+
+.homeContainer .home .left .name {
+  width: 100%;
+  height: auto;
+
+  text-transform: capitalize;
+  font-size: 45px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
+
+.homeContainer .home .left .name span {
+  color: red;
+  text-transform: capitalize;
+}
+
+.homeContainer .home .left .shortDesc {
+  width: 100%;
+  height: auto;
+
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+
   text-indent: 70px;
+}
+
+.homeContainer footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 300px;
+  height: 60px;
+  display: flex;
+}
+
+.homeContainer footer .social {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeContainer footer .social ul {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin: 0;
+  padding: 0;
+}
+
+.homeContainer footer .social ul li {
+  width: auto;
+  height: auto;
+  list-style: none;
+
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
 }

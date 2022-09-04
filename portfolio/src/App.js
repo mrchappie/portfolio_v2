@@ -9,18 +9,11 @@ import Home from './components/Layout/Home/Home';
 // import Projects from './components/Layout/Projects/Projects';
 import Settings from './components/UI/Settings/settings';
 
-// import SmallScreen from './components/UI/SmallScreen/SmallScreen';
-
-// import TsParticles from './components/Layout/Particles/TsParticle';
-
-// import ReactDOM from 'react-dom';
-import LoadingPage from './components/UI/LoadingPage/LoadingPage';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import VideoBackground from './components/UI/VideoBackground/VideoBackground';
 import WhyChappie from './components/Header/WhyChappie/WhyChappie';
-// import { useEffect } from 'react';
-// import { useCallback } from 'react';
+import LoadingSpinner from './components/UI/LoadingSpinner/LoadingSpinner';
 
 const About = React.lazy(() => import('./components/Layout/About/About'));
 const Projects = React.lazy(() =>
@@ -28,8 +21,6 @@ const Projects = React.lazy(() =>
 );
 
 function App() {
-  // const portalElem = document.getElementById('particles-bg');
-
   const activePage = useSelector((state) => state.activePage.active);
   const activeLogo = useSelector((state) => state.activeLogo.active);
 
@@ -42,17 +33,9 @@ function App() {
   }, []);
 
   return (
-    <Suspense
-      fallback={
-        <div className="centered">
-          <p>Loading...</p>
-        </div>
-      }
-    >
+    <Suspense fallback={<LoadingSpinner></LoadingSpinner>}>
       <Fragment>
-        {/* {ReactDOM.createPortal(<TsParticles></TsParticles>, portalElem)} */}
-        {/* {ReactDOM.createPortal(<SmallScreen></SmallScreen>, portalElem)} */}
-        {isLoading && <LoadingPage></LoadingPage>}
+        {/* {isLoading && <LoadingPage></LoadingPage>} */}
 
         {!activeLogo && (
           <Header>

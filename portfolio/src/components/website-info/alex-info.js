@@ -2,18 +2,20 @@ export const ALEX_INFO = {
   name: {
     firstName1: 'Alexandru',
     firstName2: 'Marian',
-    lastName: 'BOSCU',
+    lastName: 'Boscu',
     nickName: {
       name: 'Chappie',
       heading: 'Why Chappie?',
       description:
         "It all started a long time ago when I saw a movie called Chappie. I am not going to tell you about the movie because it's better to watch it yourself but short story long, it's about the fact that humanity last hope is not human!",
     },
+    shortDescription:
+      'A frontend developer in the begging of my jurney, located in Romania and looking for a new opportunity.',
   },
 
   about: {
     quote: {
-      text: `I am not the richest, smartest or most talented person in the world, but I succeed because I keep going and going and going.`,
+      text: `I am not the fastest, smartest or most talented person in the world, but I succeed because I keep going and going and going.`,
       author: ' Sylvester Stallone',
     },
     description:

@@ -4,6 +4,16 @@ import { useDispatch, useSelector } from 'react-redux';
 import { pageActions } from '../../../store/active-page';
 
 import { ALEX_INFO } from '../../website-info/alex-info';
+import profileImage from '../../../assets/profile_image.png';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import {
+  faTelegram,
+  faTwitter,
+  faInstagram,
+  faGithub,
+} from '@fortawesome/free-brands-svg-icons';
 
 const Home = () => {
   const activeColor = useSelector((state) => state.activeColor.color);
@@ -14,21 +24,53 @@ const Home = () => {
   };
 
   return (
-    <div className={classes.home}>
-      <div className={classes.name}>
-        {ALEX_INFO.name.firstName1} {ALEX_INFO.name.firstName2}
-        <span style={{ color: activeColor }}> {ALEX_INFO.name.lastName}</span>
+    <div className={classes.homeContainer}>
+      <div className={classes.home}>
+        <div className={classes.left}>
+          <div className={classes.hello}>
+            <hr />
+            <h3>Hello</h3>
+          </div>
+          <div className={classes.name}>
+            I'm {ALEX_INFO.name.firstName1}
+            <span style={{ color: activeColor }}>
+              {' '}
+              {ALEX_INFO.name.lastName}
+            </span>
+          </div>
+
+          <div className={classes.shortDesc}>
+            <p>{ALEX_INFO.name.shortDescription}</p>
+          </div>
+          <Button
+            onClick={setActivePage}
+            style={{ backgroundColor: activeColor }}
+          >
+            Get in Touch
+          </Button>
+        </div>
+        <div className={classes.right}>
+          <img src={profileImage} alt="Marian Alexandru Boscu profile" />
+        </div>
       </div>
-      <div className={classes.job}>{ALEX_INFO.about.job}</div>
-      <cite>
-        "{ALEX_INFO.about.quote.text}"
-        <span style={{ color: activeColor }}>
-          -{ALEX_INFO.about.quote.author}
-        </span>
-      </cite>
-      <Button onClick={setActivePage} style={{ backgroundColor: activeColor }}>
-        Get in Touch
-      </Button>
+      <footer>
+        <div className={classes.social}>
+          <ul>
+            <li>
+              <FontAwesomeIcon icon={faInstagram} />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faGithub} />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faTelegram} />
+            </li>
+            <li>
+              <FontAwesomeIcon icon={faTwitter} />
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
   );
 };

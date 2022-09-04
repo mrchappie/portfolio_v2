@@ -1,5 +1,9 @@
 import classes from './CloseButton.module.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+
 const CloseButton = (props) => {
   return (
     <button
@@ -8,7 +12,7 @@ const CloseButton = (props) => {
       onClick={props.onClick}
       disabled={props.disabled}
     >
-      {props.children}
+      <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
     </button>
   );
 };
