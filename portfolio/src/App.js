@@ -9,8 +9,8 @@ import Home from './components/Layout/Home/Home';
 // import Projects from './components/Layout/Projects/Projects';
 import Settings from './components/UI/Settings/settings';
 
-import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useEffect } from 'react';
+// import { useState } from 'react';
 import VideoBackground from './components/UI/VideoBackground/VideoBackground';
 import WhyChappie from './components/Header/WhyChappie/WhyChappie';
 import LoadingSpinner from './components/UI/LoadingSpinner/LoadingSpinner';
@@ -24,13 +24,13 @@ function App() {
   const activePage = useSelector((state) => state.activePage.active);
   const activeLogo = useSelector((state) => state.activeLogo.active);
 
-  const [isLoading, setIsloading] = useState(true);
+  // const [isLoading, setIsloading] = useState(true);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsloading(false);
-    }, 2200);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setIsloading(false);
+  //   }, 2200);
+  // }, []);
 
   return (
     <Suspense fallback={<LoadingSpinner></LoadingSpinner>}>
