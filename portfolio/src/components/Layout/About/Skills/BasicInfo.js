@@ -1,6 +1,6 @@
 import classes from './BasicInfo.module.css';
 
-import profileImage from '../../../../assets/profile_image.png';
+import profileImage from '../../../../assets/profile_image_2.jpg';
 import Button from '../../../UI/Button/Button/Button';
 import { useSelector } from 'react-redux';
 
@@ -10,8 +10,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faCalendar, faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import {
-  faLocation,
-  faPerson,
+  faLocationPin,
+  faUser,
   faPhone,
 } from '@fortawesome/free-solid-svg-icons';
 
@@ -32,40 +32,54 @@ const BasicInfo = () => {
       </div>
       <div className={classes.middle}>
         <div className={classes['name-classic']}>
-          <FontAwesomeIcon
-            icon={faPerson}
-            style={{ color: activeColor }}
-          ></FontAwesomeIcon>{' '}
-          {ALEX_INFO.name.firstName1} {ALEX_INFO.name.firstName2}{' '}
-          {ALEX_INFO.name.lastName}
+          <div className={classes.icon}>
+            <FontAwesomeIcon
+              icon={faUser}
+              style={{ color: activeColor }}
+            ></FontAwesomeIcon>
+          </div>
+          <div className={classes.text}>
+            {ALEX_INFO.name.firstName1} {ALEX_INFO.name.firstName2}{' '}
+            {ALEX_INFO.name.lastName}
+          </div>
         </div>
         <div className={classes.birth}>
-          <FontAwesomeIcon
-            style={{ color: activeColor }}
-            icon={faCalendar}
-          ></FontAwesomeIcon>{' '}
-          {ALEX_INFO.about.dateOfBirth.full}
+          <div className={classes.icon}>
+            <FontAwesomeIcon
+              style={{ color: activeColor }}
+              icon={faCalendar}
+            ></FontAwesomeIcon>
+          </div>
+          <div className={classes.text}>{ALEX_INFO.about.dateOfBirth.full}</div>
         </div>
         <div className={classes.address}>
-          <FontAwesomeIcon
-            icon={faLocation}
-            style={{ color: activeColor }}
-          ></FontAwesomeIcon>{' '}
-          {ALEX_INFO.about.location.city}, {ALEX_INFO.about.location.country}
+          <div className={classes.icon}>
+            <FontAwesomeIcon
+              icon={faLocationPin}
+              style={{ color: activeColor }}
+            ></FontAwesomeIcon>
+          </div>
+          <div className={classes.text}>
+            {ALEX_INFO.about.location.city}, {ALEX_INFO.about.location.country}
+          </div>
         </div>
         <div className={classes.phone}>
-          <FontAwesomeIcon
-            icon={faPhone}
-            style={{ color: activeColor }}
-          ></FontAwesomeIcon>{' '}
-          {ALEX_INFO.about.phoneNumber}
+          <div className={classes.icon}>
+            <FontAwesomeIcon
+              icon={faPhone}
+              style={{ color: activeColor }}
+            ></FontAwesomeIcon>
+          </div>
+          <div className={classes.text}>{ALEX_INFO.about.phoneNumber}</div>
         </div>
         <div className={classes.email}>
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            style={{ color: activeColor }}
-          ></FontAwesomeIcon>{' '}
-          {ALEX_INFO.about.email}
+          <div className={classes.icon}>
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              style={{ color: activeColor }}
+            ></FontAwesomeIcon>
+          </div>
+          <div className={classes.text}>{ALEX_INFO.about.email}</div>
         </div>
       </div>
       <div className={classes.bottom}>

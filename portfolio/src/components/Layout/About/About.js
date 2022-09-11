@@ -1,5 +1,5 @@
 import classes from './About.module.css';
-import profileImage from '../../../assets/profile_image.png';
+import profileImage from '../../../assets/profile_image_2.jpg';
 import Button from '../../UI/Button/Button/Button';
 import Skills from './Skills/Skills';
 import { useState } from 'react';
@@ -41,7 +41,7 @@ const About = () => {
               onClick={setLearMoreActiveHandler}
               style={{ backgroundColor: activeColor }}
             >
-              Learn More
+              Read More
             </Button>
           </div>
         </div>

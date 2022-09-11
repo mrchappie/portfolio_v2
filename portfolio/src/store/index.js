@@ -4,6 +4,7 @@ import activePageReducer from './active-page';
 import colorReducer from './color-change';
 import slideReducer from './carousel-slide';
 import logoReducer from './logo-history';
+import languageReducer from './language.js';
 
 const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ const store = configureStore({
     activeColor: colorReducer,
     activeSlide: slideReducer,
     activeLogo: logoReducer,
+    activeLanguage: languageReducer,
   },
 });
 

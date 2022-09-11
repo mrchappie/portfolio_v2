@@ -1,5 +1,7 @@
 @import '../../../website-info/colors.css';
 
+/* <a href="https://www.flaticon.com/free-icons/front-end" title="front end icons">Front end icons created by Flat Icons - Flaticon</a> */
+
 .more {
   position: relative;
   display: flex;
@@ -7,13 +9,20 @@
 
   width: 50%;
   height: 80%;
-  background-color: var(--color2);
+  background-color: rgba(0, 0, 0, 0.19);
+  /* background-color: var(--color2); */
 
   padding: 20px;
 
   border-radius: 20px;
 
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+@media (max-width: 1000px) {
+  .more {
+    width: 100%;
+  }
 }
 
 .more span {
@@ -69,6 +78,35 @@
   right: -60px;
 }
 
+.more .right-content ul li {
+  list-style: none;
+}
+
+/* HEADINGS & CONTAINERS*/
+.more .right-content > div {
+  width: 100%;
+  height: auto;
+
+  padding: 0 15px;
+  margin-bottom: 20px;
+}
+
+.more .right-content > div > .text {
+  font-size: 35px;
+  font-weight: bolder;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  padding: 5px 0 5px 10px;
+}
+
+.more .right-content > div > .text > span {
+  margin-left: 15px;
+}
+
 /* RIGHT ABOUT */
 
 .more .right {
@@ -84,4 +122,456 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+.more .right-content .about-me .shortDesc {
+  text-indent: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* RIGHT SERVICES */
+
+.more .right-content .services .provServ {
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .services .provServ ul {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .services .provServ ul li {
+  width: 110px;
+  height: 110px;
+
+  margin: 5px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.more .right-content .services .provServ ul li > .text {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.more .right-content .services .provServ ul li:hover > .text {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.more .right-content .services .provServ ul li:nth-child(1) {
+  background-image: url('../../../../assets/services/frontend.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more .right-content .services .provServ ul li:nth-child(2) {
+  background-image: url('../../../../assets/services/backend.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more .right-content .services .provServ ul li:nth-child(3) {
+  background-image: url('../../../../assets/services/design.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more .right-content .services .provServ ul li:nth-child(4) {
+  background-image: url('../../../../assets/services/ui_ux.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* RIGHT PROGRAMMING */
+
+.more .right-content .programming .progLang {
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .programming .progLang ul {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .programming .progLang ul li {
+  width: 110px;
+  height: 110px;
+  /* background-color: #000; */
+
+  margin: 5px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+
+  overflow: hidden;
+}
+
+.more .right-content .programming .progLang ul li > .text {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.more .right-content .programming .progLang ul li:hover > .text {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.more .right-content .programming .progLang ul li:nth-child(1) {
+  background-image: url('../../../../assets/prog_lang/html-5.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more .right-content .programming .progLang ul li:nth-child(2) {
+  background-image: url('../../../../assets/prog_lang/css-3.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more .right-content .programming .progLang ul li:nth-child(3) {
+  background-image: url('../../../../assets/prog_lang/js.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more .right-content .programming .progLang ul li:nth-child(4) {
+  background-image: url('../../../../assets/prog_lang/react.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* RIGHT SERVICES */
+
+.more .right-content .language .lang {
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .language .lang ul {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .language .lang ul li {
+  width: 110px;
+  height: 110px;
+
+  margin: 5px;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.more .right-content .language .lang ul li > .text {
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.more .right-content .language .lang ul li:hover > .text {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.more .right-content .language .lang ul li:nth-child(1) {
+  background-image: url('../../../../assets/lang/rom.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.more .right-content .language .lang ul li:nth-child(2) {
+  background-image: url('../../../../assets/lang/eng_v2.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* RIGHT EDUCATION */
+
+.more .right-content .education .eduContent {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .education .eduContent ul {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .education .eduContent li {
+  position: relative;
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 10px 40px;
+
+  counter-increment: li 1;
+}
+
+.more .right-content .education .eduContent li > div {
+  width: 100%;
+  height: auto;
+}
+
+.more .right-content .education .eduContent li:nth-child(odd) {
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.more .right-content .education .eduContent li:nth-child(even) {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+
+.more .right-content .education .eduContent li:first-child {
+  border-top: none;
+}
+
+.more .right-content .education .eduContent li::after {
+  content: counter(li);
+
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  padding: 0;
+  margin: 0;
+
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  border-radius: 22px;
+  border: 2px solid #fff;
+}
+
+.more .right-content .education .eduContent li:nth-child(even)::after {
+  left: -20px;
+}
+
+/* RIGHT WORK */
+
+.more .right-content .work .workContent {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .work .workContent ul {
+  position: relative;
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.more .right-content .work .workContent li {
+  position: relative;
+  width: 100%;
+  height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  padding: 10px 40px;
+
+  counter-increment: li 1;
+}
+
+.more .right-content .work .workContent li > div {
+  width: 100%;
+  height: auto;
+}
+
+.more .right-content .work .workContent li:nth-child(odd) {
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.more .right-content .work .workContent li:nth-child(even) {
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+}
+
+.more .right-content .work .workContent li:first-child {
+  border-top: none;
+}
+
+.more .right-content .work .workContent li::after {
+  content: counter(li);
+
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  padding: 0;
+  margin: 0;
+
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+
+  font-size: 20px;
+  font-weight: bold;
+
+  border-radius: 22px;
+  border: 2px solid #fff;
+}
+
+.more .right-content .work .workContent li:nth-child(even)::after {
+  left: -20px;
 }

@@ -3,12 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import classes from './settings.module.css';
 import { colorActions } from '../../../store/color-change';
 import SettingsIcon from '../Icons/SettingsIcon';
+import { languageActions } from '../../../store/language';
 
 const Settings = () => {
   const [showSettings, setShowSettings] = useState(false);
 
   const dispatch = useDispatch();
   const activeColor = useSelector((state) => state.activeColor.color);
+  const activeLanguage = useSelector((state) => state.activeLanguage.language);
 
   const toggleSettings = () => {
     setShowSettings(!showSettings);
@@ -22,7 +24,7 @@ const Settings = () => {
     return () => {
       clearTimeout(removeSettings);
     };
-  }, [activeColor]);
+  }, [activeColor, activeLanguage, showSettings]);
 
   const color0 = () => {
     dispatch(colorActions.color0());
@@ -52,6 +54,14 @@ const Settings = () => {
     dispatch(colorActions.color8());
   };
 
+  const setLanguageToEn = () => {
+    dispatch(languageActions.chnageLanguageTo('en'));
+  };
+
+  const setLanguageToRo = () => {
+    dispatch(languageActions.chnageLanguageTo('ro'));
+  };
+
   return (
     <div
       className={`${classes.settings} ${showSettings ? classes.active : ''}`}
@@ -61,55 +71,75 @@ const Settings = () => {
           <SettingsIcon></SettingsIcon>
         </span>
       </button>
-      {
-        <div className={classes.colors}>
-          <div
-            className={classes.color}
-            onClick={color0}
-            style={{ backgroundColor: '#f00' }}
-          ></div>
-          <div
-            className={classes.color}
-            onClick={color1}
-            style={{ backgroundColor: '#ffa500' }}
-          ></div>
-          <div
-            className={classes.color}
-            onClick={color2}
-            style={{ backgroundColor: '#ff0' }}
-          ></div>
-          <div
-            className={classes.color}
-            onClick={color3}
-            style={{ backgroundColor: '#0f0' }}
-          ></div>
-          <div
-            className={classes.color}
-            onClick={color4}
-            style={{ backgroundColor: '#00f' }}
-          ></div>
-          <div
-            className={classes.color}
-            onClick={color5}
-            style={{ backgroundColor: '#f0f' }}
-          ></div>
-          <div
-            className={classes.color}
-            onClick={color6}
-            style={{ backgroundColor: '#fff' }}
-          ></div>
-          <div
-            className={classes.color}
-            onClick={color7}
-            style={{ backgroundColor: '#66fcf1' }}
-          ></div>
-          <div
-            className={classes.color}
-            onClick={color8}
-            style={{ backgroundColor: '#eae7dc' }}
-          ></div>
+      <div className={classes.colors}>
+        <div
+          className={classes.color}
+          onClick={color0}
+          style={{ backgroundColor: '#f00' }}
+        ></div>
+        <div
+          className={classes.color}
+          onClick={color1}
+          style={{ backgroundColor: '#ffa500' }}
+        ></div>
+        <div
+          className={classes.color}
+          onClick={color2}
+          style={{ backgroundColor: '#ff0' }}
+        ></div>
+        <div
+          className={classes.color}
+          onClick={color3}
+          style={{ backgroundColor: '#0f0' }}
+        ></div>
+        <div
+          className={classes.color}
+          onClick={color4}
+          style={{ backgroundColor: '#00f' }}
+        ></div>
+        <div
+          className={classes.color}
+          onClick={color5}
+          style={{ backgroundColor: '#f0f' }}
+        ></div>
+        <div
+          className={classes.color}
+          onClick={color6}
+          style={{ backgroundColor: '#fff' }}
+        ></div>
+        <div
+          className={classes.color}
+          onClick={color7}
+          style={{ backgroundColor: '#66fcf1' }}
+        ></div>
+        <div
+          className={classes.color}
+          onClick={color8}
+          style={{ backgroundColor: '#eae7dc' }}
+        ></div>
+      </div>
+      <div className={classes.languages}>
+        <div
+          onClick={setLanguageToEn}
+          style={
+            activeLanguage === 'en'
+              ? { color: activeColor, fontWeight: 'bold' }
+              : { color: '#fff' }
+          }
+        >
+          EN
         </div>
-      }
+        <div
+          onClick={setLanguageToRo}
+          style={
+            activeLanguage === 'ro'
+              ? { color: activeColor, fontWeight: 'bold' }
+              : { color: '#fff' }
+          }
+        >
+          RO
+        </div>
+      </div>
     </div>
   );
 };

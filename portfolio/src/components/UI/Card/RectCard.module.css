@@ -1,0 +1,11 @@
+@import '../../website-info/colors.css';
+.RectCard {
+  border-radius: 20px;
+  /* background-color: var(--color0); */
+  background: rgb(255, 30, 86);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 30, 86, 1) 0%,
+    rgba(255, 172, 65, 1) 100%
+  );
+}

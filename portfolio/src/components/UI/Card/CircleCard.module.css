@@ -1,0 +1,14 @@
+@import '../../website-info/colors.css';
+.CircleCard {
+  border-radius: 50%;
+  /* background-color: var(--color0); */
+
+  /* background: rgb(255, 172, 65);
+  background: radial-gradient(
+    circle,
+    rgba(255, 172, 65, 1) 0%,
+    rgba(255, 30, 86, 1) 100%
+  ); */
+
+  /* background-color: #fff; */
+}

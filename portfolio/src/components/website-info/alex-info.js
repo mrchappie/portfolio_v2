@@ -19,7 +19,7 @@ export const ALEX_INFO = {
       author: ' Sylvester Stallone',
     },
     description:
-      "Hy, my name is Alex, I'm a 23 years old web deveoper from Romania. It all started like a hobby, all I wanted was to make a website for myself were to have a list with all the movies that I've watched. From usig HTML and CSS to build the website and struggling to make a button work, now I am able to work with javascript and framewokrs to build amazing websites. Google was my best teacher in this journey of learning web development",
+      "Hy, my name is Alex, I'm a 23 years old web deveoper from Romania. It all started like a hobby, all I wanted was to make a website for myself were to have a list with all the movies that I've watched. From usig HTML and CSS to build the website and struggling to make a button work, now I am able to work with javascript and frameworks to build amazing websites. Google was my best teacher in this journey of learning web development",
     shortDescription:
       'I’m eager for something new every day, open to any kind of challenges and always ready for something different.',
     job: 'Web developer',
@@ -37,7 +37,7 @@ export const ALEX_INFO = {
       backend: 'backend',
       design: {
         ui: 'UI/UX',
-        photo: 'photoshop',
+        design: 'design',
       },
     },
 
@@ -55,6 +55,10 @@ export const ALEX_INFO = {
         specialization: 'Mathematics-Computer Science',
         city: 'Turnu Magurele',
         country: 'ROMANIA',
+        date: {
+          start: 'September 2013',
+          finished: 'June 2017',
+        },
       },
       college: {
         education: 'Bachelor studies',
@@ -63,6 +67,22 @@ export const ALEX_INFO = {
         specialization: 'Fine Mechanics and Nanotechnologies',
         city: 'Bucharest',
         country: 'ROMANIA',
+        date: {
+          start: 'Octomber 2017',
+          finished: 'June 2021',
+        },
+      },
+      master: {
+        education: 'Master degree',
+        institution: 'POLITEHNICA University of Bucharest',
+        faculty: 'Mechanics and Mechatronics',
+        specialization: 'Precision Mechanics for Mechatronic Systems',
+        city: 'Bucharest',
+        country: 'ROMANIA',
+        date: {
+          start: 'Octomber 2021',
+          finished: 'Present',
+        },
       },
     },
 
@@ -70,10 +90,11 @@ export const ALEX_INFO = {
       job1: {
         post: 'Mechanical Design Engineer',
         company: 'Expleo Romania',
-        shortDescription: '',
+        shortDescription:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum.',
         period: {
           start: 'Octomber 2021',
-          finish: 'July 2022',
+          finished: 'July 2022',
         },
         location: {
           city: 'Bucharest',
@@ -84,10 +105,11 @@ export const ALEX_INFO = {
       job2: {
         post: 'Telecommunication Engineer',
         company: 'ASGO Telecom',
-        shortDescription: '',
+        shortDescription:
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum.',
         period: {
           start: 'July 2022',
-          finish: 'Present',
+          finished: 'Present',
         },
         location: {
           city: 'Bucharest',

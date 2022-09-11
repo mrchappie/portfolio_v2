@@ -1,0 +1,32 @@
+.firstRow {
+  color: #fff;
+  font-size: 15px;
+}
+
+.firstRow span {
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+.secondRow {
+  color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.secondRow span {
+  font-weight: bolder;
+  color: #fff;
+}
+
+.thirdRow {
+  color: #fff;
+}
+
+.thirdRow > div {
+  font-size: 13px;
+}
