@@ -131,11 +131,23 @@
 }
 
 .homeContainer footer .social ul li {
-  width: auto;
-  height: auto;
+  width: 40px;
+  height: 40px;
   list-style: none;
 
   font-size: 20px;
+
+  border-radius: 20px;
+
   text-align: center;
-  color: #fff;
+  color: #000;
+
+  background-color: white;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }

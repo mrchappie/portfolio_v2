@@ -7,6 +7,14 @@ import { pageActions } from '../../../store/active-page';
 import { logoActions } from '../../../store/logo-history';
 import { useSelector } from 'react-redux';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faAddressBook,
+  faHouse,
+  faRectangleList,
+  faAddressCard,
+} from '@fortawesome/free-solid-svg-icons';
+
 const Nav = (props) => {
   const dispatch = useDispatch();
   const activePage = useSelector((state) => state.activePage.active);
@@ -43,40 +51,40 @@ const Nav = (props) => {
           <span
             className={activePage === 0 ? 'active' : ''}
             style={
-              activePage === 0 ? { color: activeColor } : { color: '#fff' }
+              activePage === 0 ? { color: activeColor } : { color: '#000' }
             }
           >
-            Home
+            <FontAwesomeIcon icon={faHouse} />
           </span>
         </ButtonAsLink>
         <ButtonAsLink onClick={setAboutActive}>
           <span
             className={activePage === 1 ? 'active' : ''}
             style={
-              activePage === 1 ? { color: activeColor } : { color: '#fff' }
+              activePage === 1 ? { color: activeColor } : { color: '#000' }
             }
           >
-            About
+            <FontAwesomeIcon icon={faAddressCard} />
           </span>
         </ButtonAsLink>
         <ButtonAsLink onClick={setProjectsActive}>
           <span
             className={activePage === 2 ? 'active' : ''}
             style={
-              activePage === 2 ? { color: activeColor } : { color: '#fff' }
+              activePage === 2 ? { color: activeColor } : { color: '#000' }
             }
           >
-            Projects
+            <FontAwesomeIcon icon={faRectangleList} />
           </span>
         </ButtonAsLink>
         <ButtonAsLink onClick={setContactActive}>
           <span
             className={activePage === 3 ? 'active' : ''}
             style={
-              activePage === 3 ? { color: activeColor } : { color: '#fff' }
+              activePage === 3 ? { color: activeColor } : { color: '#000' }
             }
           >
-            Contact
+            <FontAwesomeIcon icon={faAddressBook} />
           </span>
         </ButtonAsLink>
       </div>
