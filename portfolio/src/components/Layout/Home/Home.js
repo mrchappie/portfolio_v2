@@ -14,6 +14,7 @@ import {
   faInstagram,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const activeColor = useSelector((state) => state.activeColor.color);
@@ -42,12 +43,14 @@ const Home = () => {
           <div className={classes.shortDesc}>
             <p>{ALEX_INFO.name.shortDescription}</p>
           </div>
-          <Button
-            onClick={setActivePage}
-            style={{ backgroundColor: activeColor }}
-          >
-            Get in Touch
-          </Button>
+          <Link to="/contact">
+            <Button
+              onClick={setActivePage}
+              style={{ backgroundColor: activeColor }}
+            >
+              Get in Touch
+            </Button>
+          </Link>
         </div>
         <div className={classes.right}>
           <img src={profileImage} alt="Marian Alexandru Boscu profile" />

@@ -10,14 +10,18 @@ import {
   useLayoutEffect,
   useRef,
 } from 'react';
-import LeftArrow from '../Icons/LeftArrow';
-import RightArrow from '../Icons/RightArrow';
 
 import project0 from '../../../assets/project_1.png';
 import project1 from '../../../assets/project_2.png';
 import project2 from '../../../assets/project_3.png';
 import project3 from '../../../assets/project_4.png';
 import project4 from '../../../assets/project_5.png';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCircleArrowLeft,
+  faCircleArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 const carouselContent = [
   {
@@ -123,7 +127,11 @@ const Carousel = () => {
     <div className={classes.carouselContainer}>
       <div className={classes.leftBtn}>
         <button onClick={moveSlideLeft} className={classes.prev}>
-          <LeftArrow style={{ color: activeColor }}></LeftArrow>
+          {/* <LeftArrow style={{ color: activeColor }}></LeftArrow> */}
+          <FontAwesomeIcon
+            style={{ color: activeColor }}
+            icon={faCircleArrowLeft}
+          />
         </button>
       </div>
       <div className={classes.slideContainer}>
@@ -135,7 +143,11 @@ const Carousel = () => {
       </div>
       <div className={classes.rightBtn}>
         <button onClick={moveSlideRight} className={classes.next}>
-          <RightArrow style={{ color: activeColor }}></RightArrow>
+          {/* <RightArrow style={{ color: activeColor }}></RightArrow> */}
+          <FontAwesomeIcon
+            style={{ color: activeColor }}
+            icon={faCircleArrowRight}
+          />
         </button>
       </div>
     </div>

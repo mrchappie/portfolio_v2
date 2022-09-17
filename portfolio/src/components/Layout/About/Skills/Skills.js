@@ -7,6 +7,7 @@ import BasicInfo from './BasicInfo';
 import { ALEX_INFO } from '../../../website-info/alex-info';
 import EducationComp from './Comps/EducationComp';
 import WorkComp from './Comps/WorkComp';
+import { Link } from 'react-router-dom';
 
 const Skills = (props) => {
   const activeColor = useSelector((state) => state.activeColor.color);
@@ -14,9 +15,11 @@ const Skills = (props) => {
   return (
     <Fragment>
       <div className={classes.more}>
-        <CloseButton className={classes.btn} onClick={props.onChangeActive}>
-          X
-        </CloseButton>
+        <Link to="/about">
+          <CloseButton className={classes.btn} onClick={props.onChangeActive}>
+            X
+          </CloseButton>
+        </Link>
         <div className={classes.left}>
           <BasicInfo></BasicInfo>
         </div>

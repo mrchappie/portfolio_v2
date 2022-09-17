@@ -14,6 +14,7 @@ import {
   faRectangleList,
   faAddressCard,
 } from '@fortawesome/free-solid-svg-icons';
+import { NavLink } from 'react-router-dom';
 
 const Nav = (props) => {
   const dispatch = useDispatch();
@@ -47,46 +48,50 @@ const Nav = (props) => {
         {/* <h1 onClick={showLogoHistory}>chappie</h1> */}
       </div>
       <div className={classes.pages}>
-        <ButtonAsLink onClick={setHomeActive}>
-          <span
-            className={activePage === 0 ? 'active' : ''}
-            style={
-              activePage === 0 ? { color: activeColor } : { color: '#000' }
-            }
-          >
-            <FontAwesomeIcon icon={faHouse} />
-          </span>
-        </ButtonAsLink>
-        <ButtonAsLink onClick={setAboutActive}>
-          <span
-            className={activePage === 1 ? 'active' : ''}
-            style={
-              activePage === 1 ? { color: activeColor } : { color: '#000' }
-            }
-          >
-            <FontAwesomeIcon icon={faAddressCard} />
-          </span>
-        </ButtonAsLink>
-        <ButtonAsLink onClick={setProjectsActive}>
-          <span
-            className={activePage === 2 ? 'active' : ''}
-            style={
-              activePage === 2 ? { color: activeColor } : { color: '#000' }
-            }
-          >
-            <FontAwesomeIcon icon={faRectangleList} />
-          </span>
-        </ButtonAsLink>
-        <ButtonAsLink onClick={setContactActive}>
-          <span
-            className={activePage === 3 ? 'active' : ''}
-            style={
-              activePage === 3 ? { color: activeColor } : { color: '#000' }
-            }
-          >
-            <FontAwesomeIcon icon={faAddressBook} />
-          </span>
-        </ButtonAsLink>
+        <NavLink to="/welcome">
+          <ButtonAsLink onClick={setHomeActive}>
+            <FontAwesomeIcon
+              icon={faHouse}
+              className={activePage === 0 ? 'active' : ''}
+              style={
+                activePage === 0 ? { color: activeColor } : { color: '#000' }
+              }
+            />
+          </ButtonAsLink>
+        </NavLink>
+        <NavLink to="/about">
+          <ButtonAsLink onClick={setAboutActive}>
+            <FontAwesomeIcon
+              icon={faAddressCard}
+              className={activePage === 1 ? 'active' : ''}
+              style={
+                activePage === 1 ? { color: activeColor } : { color: '#000' }
+              }
+            />
+          </ButtonAsLink>
+        </NavLink>
+        <NavLink to="/projects">
+          <ButtonAsLink onClick={setProjectsActive}>
+            <FontAwesomeIcon
+              icon={faRectangleList}
+              className={activePage === 2 ? 'active' : ''}
+              style={
+                activePage === 2 ? { color: activeColor } : { color: '#000' }
+              }
+            />
+          </ButtonAsLink>
+        </NavLink>
+        <NavLink to="/contact">
+          <ButtonAsLink onClick={setContactActive}>
+            <FontAwesomeIcon
+              icon={faAddressBook}
+              className={activePage === 3 ? 'active' : ''}
+              style={
+                activePage === 3 ? { color: activeColor } : { color: '#000' }
+              }
+            />
+          </ButtonAsLink>
+        </NavLink>
       </div>
     </nav>
   );

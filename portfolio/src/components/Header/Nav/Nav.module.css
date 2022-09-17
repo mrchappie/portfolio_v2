@@ -38,6 +38,11 @@
   cursor: pointer;
 }
 
-.nav button span[class^='active'] {
+.active {
   color: #f00;
+}
+
+.nav a {
+  color: #000;
+  text-decoration: none;
 }

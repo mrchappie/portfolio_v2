@@ -1,11 +1,12 @@
 import classes from './About.module.css';
 import profileImage from '../../../assets/profile_image_2.jpg';
 import Button from '../../UI/Button/Button/Button';
-import Skills from './Skills/Skills';
+// import Skills from './Skills/Skills';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import { ALEX_INFO } from '../../website-info/alex-info';
+import { Link, Outlet } from 'react-router-dom';
 
 const About = () => {
   const activeColor = useSelector((state) => state.activeColor.color);
@@ -15,9 +16,9 @@ const About = () => {
     setLearMoreActive(true);
   };
 
-  const removeLearMoreHandler = () => {
-    setLearMoreActive(false);
-  };
+  // const removeLearMoreHandler = () => {
+  //   setLearMoreActive(false);
+  // };
 
   return (
     <div className={classes.container}>
@@ -37,18 +38,24 @@ const About = () => {
             <div className={classes.description}>
               <p>{ALEX_INFO.about.description}</p>
             </div>
-            <Button
-              onClick={setLearMoreActiveHandler}
-              style={{ backgroundColor: activeColor }}
-            >
-              Read More
-            </Button>
+            <Link to="read-more">
+              <Button
+                onClick={setLearMoreActiveHandler}
+                style={{ backgroundColor: activeColor }}
+              >
+                Read More
+              </Button>
+            </Link>
+            <Outlet></Outlet>
           </div>
         </div>
       )}
-      {isLearMoreActive && (
+      {/* {isLearMoreActive && (
         <Skills onChangeActive={removeLearMoreHandler}></Skills>
-      )}
+      )} */}
+      {/* <Link to="read-more">
+        <Skills onChangeActive={removeLearMoreHandler}></Skills>
+      </Link> */}
     </div>
   );
 };
