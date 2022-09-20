@@ -19,7 +19,7 @@ const Settings = () => {
   useEffect(() => {
     const removeSettings = setTimeout(() => {
       setShowSettings(false);
-    }, 5000);
+    }, 50000000);
 
     return () => {
       clearTimeout(removeSettings);
@@ -37,21 +37,6 @@ const Settings = () => {
   };
   const color3 = () => {
     dispatch(colorActions.color3());
-  };
-  const color4 = () => {
-    dispatch(colorActions.color4());
-  };
-  const color5 = () => {
-    dispatch(colorActions.color5());
-  };
-  const color6 = () => {
-    dispatch(colorActions.color6());
-  };
-  const color7 = () => {
-    dispatch(colorActions.color7());
-  };
-  const color8 = () => {
-    dispatch(colorActions.color8());
   };
 
   const setLanguageToEn = () => {
@@ -85,37 +70,12 @@ const Settings = () => {
         <div
           className={classes.color}
           onClick={color2}
-          style={{ backgroundColor: '#ff0' }}
-        ></div>
-        <div
-          className={classes.color}
-          onClick={color3}
           style={{ backgroundColor: '#0f0' }}
         ></div>
         <div
           className={classes.color}
-          onClick={color4}
-          style={{ backgroundColor: '#00f' }}
-        ></div>
-        <div
-          className={classes.color}
-          onClick={color5}
+          onClick={color3}
           style={{ backgroundColor: '#f0f' }}
-        ></div>
-        <div
-          className={classes.color}
-          onClick={color6}
-          style={{ backgroundColor: '#fff' }}
-        ></div>
-        <div
-          className={classes.color}
-          onClick={color7}
-          style={{ backgroundColor: '#66fcf1' }}
-        ></div>
-        <div
-          className={classes.color}
-          onClick={color8}
-          style={{ backgroundColor: '#eae7dc' }}
         ></div>
       </div>
       <div className={classes.languages}>
