@@ -46,10 +46,10 @@ const About = () => {
                 Read More
               </Button>
             </Link>
-            <Outlet></Outlet>
           </div>
         </div>
       )}
+      <Outlet />
       {/* {isLearMoreActive && (
         <Skills onChangeActive={removeLearMoreHandler}></Skills>
       )} */}

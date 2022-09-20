@@ -6,7 +6,7 @@ import Nav from './components/Header/Nav/Nav';
 // import Settings from './components/UI/Settings/settings';
 
 import VideoBackground from './components/UI/VideoBackground/VideoBackground';
-// import WhyChappie from './components/Header/WhyChappie/WhyChappie';
+import WhyChappie from './components/Header/WhyChappie/WhyChappie';
 // import LoadingSpinner from './components/UI/LoadingSpinner/LoadingSpinner';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
@@ -22,6 +22,7 @@ import About from './pages/About';
 import Skills from './components/Layout/About/Skills/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   // const activePage = useSelector((state) => state.activePage.active);
@@ -60,11 +61,12 @@ function App() {
             element={<Navigate replace to="/welcome"></Navigate>}
           ></Route>
           <Route path="/welcome" element={<Home />}></Route>
+          <Route path="/welcome/why-chappie" element={<WhyChappie />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/about/read-more" element={<Skills />}></Route>
+          <Route path="/about/read-more" element={<Skills />} />
           <Route path="/projects" element={<Projects />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/*" element={<p>404. Page not found!</p>}></Route>
+          <Route path="/*" element={<NotFound />}></Route>
         </Routes>
       </main>
       <VideoBackground></VideoBackground>

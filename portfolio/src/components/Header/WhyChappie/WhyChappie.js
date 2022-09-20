@@ -7,6 +7,7 @@ import { logoActions } from '../../../store/logo-history';
 import CloseButton from '../../UI/Button/Button/CloseButton';
 
 import { ALEX_INFO } from '../../website-info/alex-info';
+import { Link } from 'react-router-dom';
 
 const WhyChappie = (props) => {
   const dispatch = useDispatch();
@@ -21,9 +22,11 @@ const WhyChappie = (props) => {
     <div className={classes['why-container']}>
       <div className={classes.overlay} onClick={hideLogoHistory}></div>
       <Card className={classes.whychappie}>
-        <CloseButton onClick={hideLogoHistory} className={classes.button}>
-          X
-        </CloseButton>
+        <Link to="/welcome">
+          <CloseButton onClick={hideLogoHistory} className={classes.button}>
+            X
+          </CloseButton>
+        </Link>
         <div className={classes.headertext}>
           <h1>{ALEX_INFO.name.nickName.heading}</h1>
         </div>
