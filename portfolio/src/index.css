@@ -7,6 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -21,16 +32,16 @@ html {
   height: 100vh;
   font-family: 'Noto Sans JP', sans-serif;
 
-  background: var(--color2);
+  /* background: var(--color2); */
+  background-image: var(--linear-gradient-backgound-1);
+
+  overflow-x: hidden;
 }
 
 main {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
   width: 100vw;
-  height: 100vh;
-  /* height: calc(100vh - 60px); */
+  min-height: 100vh;
   z-index: 0;
 
   display: flex;

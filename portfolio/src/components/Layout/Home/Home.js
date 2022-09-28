@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { pageActions } from '../../../store/active-page';
 
 import { ALEX_INFO } from '../../website-info/alex-info';
-import profileImage from '../../../assets/profile_image_1.png';
+import profileImage from '../../../assets/proile-pictures/profile_image_1.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

@@ -1,3 +1,5 @@
+@import url('../../website-info/colors/colors.css');
+
 .why-container {
   position: relative;
   display: flex;
@@ -5,8 +7,8 @@
   align-items: center;
   justify-content: center;
 
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
 
 .why-container .overlay {
@@ -15,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: var(--black-alpha-70);
   z-index: 0;
 }
 
@@ -25,7 +27,7 @@
   height: 600px;
 
   padding: 20px 40px;
-  color: #fff;
+  color: var(--white);
 
   display: flex;
   flex-direction: column;

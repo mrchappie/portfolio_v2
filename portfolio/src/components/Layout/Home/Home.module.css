@@ -1,7 +1,7 @@
 .homeContainer {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -22,7 +22,25 @@
   justify-content: center;
 
   color: #fff;
-  background-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.1);
+
+  /* background-image: linear-gradient(
+    to right top,
+    #ff1e56,
+    #d72a6d,
+    #a93875,
+    #7b3e6f,
+    #533d5b,
+    #59415c,
+    #5e455d,
+    #634a5f,
+    #975870,
+    #cb686d,
+    #f0835b,
+    #ffac41
+  ); */
+
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.25);
 }
 
 .homeContainer .home .left {

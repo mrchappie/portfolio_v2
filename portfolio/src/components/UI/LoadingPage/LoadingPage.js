@@ -1,13 +1,7 @@
-import classes from './LoadingPage.module.css';
+// import classes from './LoadingPage.module.css';
 
 const LoadingPage = () => {
-  return (
-    <div className={classes.loading}>
-      <div className={classes['large-circle']}>
-        <div className={classes['inside-large']}></div>
-      </div>
-    </div>
-  );
+  return <p>this is a loading page</p>;
 };
 
 export default LoadingPage;

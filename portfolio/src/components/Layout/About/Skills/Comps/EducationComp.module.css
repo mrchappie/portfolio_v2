@@ -1,5 +1,7 @@
+@import url('../../../../website-info/colors/colors.css');
+
 .firstRow {
-  color: #fff;
+  color: var(--white);
 }
 
 .firstRow > div {
@@ -12,7 +14,7 @@
 }
 
 .secondRow {
-  color: #fff;
+  color: var(--white);
 
   display: flex;
   flex-direction: row;
@@ -26,11 +28,11 @@
 
 .secondRow > div span {
   font-weight: bolder;
-  color: #fff;
+  color: var(--white);
 }
 
 .thirdRow {
-  color: #fff;
+  color: var(--white);
 }
 
 .thirdRow > div {

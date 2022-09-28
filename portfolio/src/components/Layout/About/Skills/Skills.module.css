@@ -1,22 +1,33 @@
-@import '../../../website-info/colors.css';
+@import url('../../../website-info/colors/colors.css');
 
 /* <a href="https://www.flaticon.com/free-icons/front-end" title="front end icons">Front end icons created by Flat Icons - Flaticon</a> */
+
+.more-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .more {
   position: relative;
   display: flex;
-  color: white;
+  color: var(--white);
 
   width: 50%;
   height: 80%;
-  background-color: rgba(0, 0, 0, 0.19);
+  background-color: var(--black-alpha-20);
   /* background-color: var(--color2); */
 
   padding: 20px;
 
   border-radius: 20px;
 
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: var(--black-alpha-20) 0px 10px 20px,
+    var(--black-alpha-25) 0px 6px 6px;
 }
 
 @media (max-width: 1000px) {
@@ -26,7 +37,7 @@
 }
 
 .more span {
-  color: red;
+  color: var(--red);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -127,7 +138,7 @@
 .more .right-content .about-me .shortDesc {
   text-indent: 20px;
   font-size: 20px;
-  color: #fff;
+  color: var(--white);
 }
 
 /* RIGHT SERVICES */
@@ -173,7 +184,7 @@
   height: 100%;
   padding: 2px;
 
-  color: #fff;
+  color: var(--white);
   font-size: 15px;
   font-weight: bold;
   text-align: center;
@@ -191,7 +202,7 @@
 
 .more .right-content .services .provServ ul li:hover > .text {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--black-alpha-60);
 }
 
 .more .right-content .services .provServ ul li:nth-child(1) {
@@ -258,7 +269,7 @@
   align-items: center;
   justify-content: center;
 
-  color: #000;
+  color: var(--black);
   font-size: 20px;
   font-weight: bold;
 
@@ -270,7 +281,7 @@
   height: 100%;
   padding: 2px;
 
-  color: #fff;
+  color: var(--white);
   font-size: 15px;
   font-weight: bold;
   text-align: center;
@@ -288,7 +299,7 @@
 
 .more .right-content .programming .progLang ul li:hover > .text {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--black-alpha-60);
 }
 
 .more .right-content .programming .progLang ul li:nth-child(1) {
@@ -362,7 +373,7 @@
   height: 100%;
   padding: 2px;
 
-  color: #fff;
+  color: var(--white);
   font-size: 15px;
   font-weight: bold;
   text-align: center;
@@ -380,7 +391,7 @@
 
 .more .right-content .language .lang ul li:hover > .text {
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--black-alpha-60);
 }
 
 .more .right-content .language .lang ul li:nth-child(1) {
@@ -442,13 +453,13 @@
 }
 
 .more .right-content .education .eduContent li:nth-child(odd) {
-  border-top: 2px solid white;
-  border-right: 2px solid white;
+  border-top: 2px solid var(--white);
+  border-right: 2px solid var(--white);
 }
 
 .more .right-content .education .eduContent li:nth-child(even) {
-  border-top: 2px solid white;
-  border-left: 2px solid white;
+  border-top: 2px solid var(--white);
+  border-left: 2px solid var(--white);
 }
 
 .more .right-content .education .eduContent li:first-child {
@@ -468,7 +479,7 @@
 
   width: 40px;
   height: 40px;
-  background-color: #000;
+  background-color: var(--black);
 
   display: flex;
   align-items: center;
@@ -479,7 +490,7 @@
   font-weight: bold;
 
   border-radius: 22px;
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
 }
 
 .more .right-content .education .eduContent li:nth-child(even)::after {
@@ -532,13 +543,13 @@
 }
 
 .more .right-content .work .workContent li:nth-child(odd) {
-  border-top: 2px solid white;
-  border-right: 2px solid white;
+  border-top: 2px solid var(--white);
+  border-right: 2px solid var(--white);
 }
 
 .more .right-content .work .workContent li:nth-child(even) {
-  border-top: 2px solid white;
-  border-left: 2px solid white;
+  border-top: 2px solid var(--white);
+  border-left: 2px solid var(--white);
 }
 
 .more .right-content .work .workContent li:first-child {
@@ -558,7 +569,7 @@
 
   width: 40px;
   height: 40px;
-  background-color: #000;
+  background-color: var(--black);
 
   display: flex;
   align-items: center;
@@ -569,7 +580,7 @@
   font-weight: bold;
 
   border-radius: 22px;
-  border: 2px solid #fff;
+  border: 2px solid var(--white);
 }
 
 .more .right-content .work .workContent li:nth-child(even)::after {

@@ -19,7 +19,7 @@ const Settings = () => {
   useEffect(() => {
     const removeSettings = setTimeout(() => {
       setShowSettings(false);
-    }, 50000000);
+    }, 4000);
 
     return () => {
       clearTimeout(removeSettings);

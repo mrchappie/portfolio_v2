@@ -1,5 +1,5 @@
 import classes from './About.module.css';
-import profileImage from '../../../assets/profile_image_2.jpg';
+import profileImage from '../../../assets/proile-pictures/profile_image_2.jpg';
 import Button from '../../UI/Button/Button/Button';
 // import Skills from './Skills/Skills';
 import { useState } from 'react';

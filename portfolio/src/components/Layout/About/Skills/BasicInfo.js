@@ -1,6 +1,6 @@
 import classes from './BasicInfo.module.css';
 
-import profileImage from '../../../../assets/profile_image_2.jpg';
+import profileImage from '../../../../assets/proile-pictures/profile_image_2.jpg';
 import Button from '../../../UI/Button/Button/Button';
 import { useSelector } from 'react-redux';
 

@@ -1,10 +1,22 @@
+@import url('../../website-info/colors/colors.css');
+
+.contact-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact {
   width: 50vw;
   height: 80%;
   background-color: rgba(0, 0, 0, 0.2);
   padding: 20px;
 
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  box-shadow: var(--box-shadow-1);
 }
 
 .contact .about {

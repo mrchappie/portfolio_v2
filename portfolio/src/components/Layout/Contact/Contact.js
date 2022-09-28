@@ -10,12 +10,14 @@ const Contact = () => {
   // const activeColor = useSelector((state) => state.activeColor.color);
 
   return (
-    <Card className={classes.contact}>
-      <div className={classes.about}>
-        <BasicInfo></BasicInfo>
-      </div>
-      <Input className={classes.form}></Input>
-    </Card>
+    <div className={classes['contact-container']}>
+      <Card className={classes.contact}>
+        <div className={classes.about}>
+          <BasicInfo></BasicInfo>
+        </div>
+        <Input className={classes.form}></Input>
+      </Card>
+    </div>
   );
 };
 
