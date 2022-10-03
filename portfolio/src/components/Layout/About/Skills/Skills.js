@@ -123,44 +123,6 @@ const Skills = (props) => {
                     <ul>
                       <li>
                         <EducationComp
-                          education={ALEX_INFO.about.education.master.education}
-                          institution={
-                            ALEX_INFO.about.education.master.institution
-                          }
-                          start={ALEX_INFO.about.education.master.date.start}
-                          finished={
-                            ALEX_INFO.about.education.master.date.finished
-                          }
-                          city={ALEX_INFO.about.education.master.city}
-                          country={ALEX_INFO.about.education.master.country}
-                          faculty={ALEX_INFO.about.education.master.faculty}
-                          specialization={
-                            ALEX_INFO.about.education.master.specialization
-                          }
-                        ></EducationComp>
-                      </li>
-                      <li>
-                        <EducationComp
-                          education={
-                            ALEX_INFO.about.education.college.education
-                          }
-                          institution={
-                            ALEX_INFO.about.education.college.institution
-                          }
-                          start={ALEX_INFO.about.education.college.date.start}
-                          finished={
-                            ALEX_INFO.about.education.college.date.finished
-                          }
-                          city={ALEX_INFO.about.education.college.city}
-                          country={ALEX_INFO.about.education.college.country}
-                          faculty={ALEX_INFO.about.education.college.faculty}
-                          specialization={
-                            ALEX_INFO.about.education.college.specialization
-                          }
-                        ></EducationComp>
-                      </li>
-                      <li>
-                        <EducationComp
                           education={
                             ALEX_INFO.about.education.hightSchool.education
                           }
@@ -185,6 +147,46 @@ const Skills = (props) => {
                           }
                         ></EducationComp>
                       </li>
+
+                      <li>
+                        <EducationComp
+                          education={
+                            ALEX_INFO.about.education.college.education
+                          }
+                          institution={
+                            ALEX_INFO.about.education.college.institution
+                          }
+                          start={ALEX_INFO.about.education.college.date.start}
+                          finished={
+                            ALEX_INFO.about.education.college.date.finished
+                          }
+                          city={ALEX_INFO.about.education.college.city}
+                          country={ALEX_INFO.about.education.college.country}
+                          faculty={ALEX_INFO.about.education.college.faculty}
+                          specialization={
+                            ALEX_INFO.about.education.college.specialization
+                          }
+                        ></EducationComp>
+                      </li>
+
+                      <li>
+                        <EducationComp
+                          education={ALEX_INFO.about.education.master.education}
+                          institution={
+                            ALEX_INFO.about.education.master.institution
+                          }
+                          start={ALEX_INFO.about.education.master.date.start}
+                          finished={
+                            ALEX_INFO.about.education.master.date.finished
+                          }
+                          city={ALEX_INFO.about.education.master.city}
+                          country={ALEX_INFO.about.education.master.country}
+                          faculty={ALEX_INFO.about.education.master.faculty}
+                          specialization={
+                            ALEX_INFO.about.education.master.specialization
+                          }
+                        ></EducationComp>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -194,23 +196,6 @@ const Skills = (props) => {
                   </div>
                   <div className={classes.workContent}>
                     <ul>
-                      <li>
-                        <WorkComp
-                          post={ALEX_INFO.about.experience.job2.post}
-                          company={ALEX_INFO.about.experience.job2.company}
-                          shortDescription={
-                            ALEX_INFO.about.experience.job2.shortDescription
-                          }
-                          start={ALEX_INFO.about.experience.job2.period.start}
-                          finished={
-                            ALEX_INFO.about.experience.job2.period.finished
-                          }
-                          city={ALEX_INFO.about.experience.job2.location.city}
-                          country={
-                            ALEX_INFO.about.experience.job2.location.country
-                          }
-                        ></WorkComp>
-                      </li>
                       <li>
                         <WorkComp
                           post={ALEX_INFO.about.experience.job1.post}
@@ -225,6 +210,23 @@ const Skills = (props) => {
                           city={ALEX_INFO.about.experience.job1.location.city}
                           country={
                             ALEX_INFO.about.experience.job1.location.country
+                          }
+                        ></WorkComp>
+                      </li>
+                      <li>
+                        <WorkComp
+                          post={ALEX_INFO.about.experience.job2.post}
+                          company={ALEX_INFO.about.experience.job2.company}
+                          shortDescription={
+                            ALEX_INFO.about.experience.job2.shortDescription
+                          }
+                          start={ALEX_INFO.about.experience.job2.period.start}
+                          finished={
+                            ALEX_INFO.about.experience.job2.period.finished
+                          }
+                          city={ALEX_INFO.about.experience.job2.location.city}
+                          country={
+                            ALEX_INFO.about.experience.job2.location.country
                           }
                         ></WorkComp>
                       </li>

@@ -12,10 +12,20 @@
   --red: #f00;
   --grey: #808080;
 
+  /* NEW COLORS */
+
+  --color-0: #1a1a1d;
+  --color-1: #4e4e50;
+  --color-2: #6f2232;
+  --color-3: #950704;
+  --color-4: #c3073f;
+
   /* BACKGROUND COLORS */
 
   /* GRADIENTS */
-  --linear-gradient-backgound-0: linear-gradient(
+  --linear-gradient-bg-0: transparent;
+
+  --linear-gradient-bg-1: linear-gradient(
     to right top,
     #ff1e56,
     #d72a6d,
@@ -31,7 +41,7 @@
     #ffac41
   );
 
-  --linear-gradient-backgound-1: linear-gradient(
+  --linear-gradient-bg-2: linear-gradient(
     to right top,
     #d16ba5,
     #c777b9,
@@ -45,6 +55,22 @@
     #41dfff,
     #46eefa,
     #5ffbf1
+  );
+
+  --linear-gradient-bg-3: linear-gradient(
+    to left top,
+    #c3073f,
+    #b3133d,
+    #a3193b,
+    #941d39,
+    #842036,
+    #76203a,
+    #66213b,
+    #57223a,
+    #44223a,
+    #312134,
+    #231f2a,
+    #1a1a1d
   );
 
   /* COLORS WITH ALPHA CHANNEL */
@@ -97,6 +123,9 @@
 
   /* BOX SHADOWS */
 
-  --box-shadow-1: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+  --box-shadow-0: rgba(0, 0, 0, 0.19) 0px 10px 20px,
     rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  --box-shadow-1: inset 0 0 20px rgba(0, 0, 0, 0.25);
+  --box-shadow-2: var(--black-alpha-15) 0px 15px 25px,
+    var(--black-alpha-15) 0px 5px 10px;
 }

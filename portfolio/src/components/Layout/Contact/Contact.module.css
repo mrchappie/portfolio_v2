@@ -13,7 +13,7 @@
 .contact {
   width: 50vw;
   height: 80%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-image: var(--linear-gradient-bg-0);
   padding: 20px;
 
   box-shadow: var(--box-shadow-1);

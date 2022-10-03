@@ -90,8 +90,7 @@ export const ALEX_INFO = {
       job1: {
         post: 'Mechanical Design Engineer',
         company: 'Expleo Romania',
-        shortDescription:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum.',
+        shortDescription: `Mechanical Design Engineer for the architecture department in SERIAL LIFE phase of the Project and DEVELOPMENT phase of the Project for Renault Group.`,
         period: {
           start: 'Octomber 2021',
           finished: 'July 2022',
@@ -106,7 +105,7 @@ export const ALEX_INFO = {
         post: 'Telecommunication Engineer',
         company: 'ASGO Telecom',
         shortDescription:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi non quis exercitationem culpa nesciunt nihil aut nostrum.',
+          'Emitting work orders for ground team and ensuring that information is correctly passed from radio engineer to technicians who make modification on existing radio sites for Orange.',
         period: {
           start: 'July 2022',
           finished: 'Present',

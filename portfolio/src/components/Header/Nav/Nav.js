@@ -1,11 +1,9 @@
 import classes from './Nav.module.css';
-// import logo from '../../../assets/robot.png';
 import logo from '../../../assets/logo.svg';
 import ButtonAsLink from '../../UI/Button/ButtonAsLink/ButtonAsLink';
 import { useDispatch } from 'react-redux';
-// import { pageActions } from '../../../store/active-page';
 import { logoActions } from '../../../store/logo-history';
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -18,24 +16,7 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Nav = (props) => {
   const dispatch = useDispatch();
-  // const activePage = useSelector((state) => state.activePage.active);
-  // const activeColor = useSelector((state) => state.activeColor.color);
-
-  // const setHomeActive = () => {
-  //   dispatch(pageActions.home());
-  // };
-
-  // const setAboutActive = () => {
-  //   dispatch(pageActions.about());
-  // };
-
-  // const setProjectsActive = () => {
-  //   dispatch(pageActions.projects());
-  // };
-
-  // const setContactActive = () => {
-  //   dispatch(pageActions.contact());
-  // };
+  const activeColor = useSelector((state) => state.activeColor.color);
 
   const showLogoHistory = () => {
     dispatch(logoActions.toggleLogoHistory());
@@ -52,7 +33,10 @@ const Nav = (props) => {
         <ButtonAsLink>
           <NavLink
             to="/welcome"
-            className={(navData) => (navData.isActive ? classes.active : '')}
+            // className={(navData) => (navData.isActive ? classes.active : '')}
+            style={(navData) =>
+              navData.isActive ? { color: activeColor } : { color: 'black' }
+            }
           >
             <FontAwesomeIcon icon={faHouse} />
           </NavLink>
@@ -61,7 +45,10 @@ const Nav = (props) => {
         <ButtonAsLink>
           <NavLink
             to="/about"
-            className={(navData) => (navData.isActive ? classes.active : '')}
+            // className={(navData) => (navData.isActive ? classes.active : '')}
+            style={(navData) =>
+              navData.isActive ? { color: activeColor } : { color: 'black' }
+            }
           >
             <FontAwesomeIcon icon={faAddressCard} />
           </NavLink>
@@ -69,7 +56,10 @@ const Nav = (props) => {
         <ButtonAsLink>
           <NavLink
             to="/projects"
-            className={(navData) => (navData.isActive ? classes.active : '')}
+            // className={(navData) => (navData.isActive ? classes.active : '')}
+            style={(navData) =>
+              navData.isActive ? { color: activeColor } : { color: 'black' }
+            }
           >
             <FontAwesomeIcon icon={faRectangleList} />
           </NavLink>
@@ -77,7 +67,10 @@ const Nav = (props) => {
         <ButtonAsLink>
           <NavLink
             to="/contact"
-            className={(navData) => (navData.isActive ? classes.active : '')}
+            // className={(navData) => (navData.isActive ? classes.active : '')}
+            style={(navData) =>
+              navData.isActive ? { color: activeColor } : { color: 'black' }
+            }
           >
             <FontAwesomeIcon icon={faAddressBook} />
           </NavLink>

@@ -1,13 +1,12 @@
 import classes from './BasicInfo.module.css';
+import { useSelector } from 'react-redux';
+import Button from '../../../UI/Button/Button/Button';
 
 import profileImage from '../../../../assets/proile-pictures/profile_image_2.jpg';
-import Button from '../../../UI/Button/Button/Button';
-import { useSelector } from 'react-redux';
-
 import { ALEX_INFO } from '../../../website-info/alex-info';
+import CV from '../../../../assets/CV/BOȘCU_Marian_Alexandru_CV_EN.pdf';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
 import { faCalendar, faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import {
   faLocationPin,
@@ -83,7 +82,9 @@ const BasicInfo = () => {
         </div>
       </div>
       <div className={classes.bottom}>
-        <Button style={{ backgroundColor: activeColor }}>Download CV</Button>
+        <a href={CV} download="BOȘCU_Marian_Alexandru_CV_EN.pdf">
+          <Button style={{ backgroundColor: activeColor }}>Download CV</Button>
+        </a>
       </div>
     </div>
   );
