@@ -11,6 +11,7 @@
 }
 
 .contact {
+  position: relative;
   width: 50vw;
   height: 80%;
   background-image: var(--linear-gradient-bg-0);
@@ -29,4 +30,22 @@
   width: 70%;
   height: 100%;
   float: right;
+}
+
+.error {
+  position: absolute;
+
+  width: 200px;
+  height: 20px;
+
+  bottom: 15%;
+  right: 35%;
+  transform: translateX(50%);
+
+  /* background-color: aliceblue; */
+  color: black;
+  font-weight: bold;
+
+  text-align: center;
+  align-items: center;
 }
