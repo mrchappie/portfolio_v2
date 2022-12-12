@@ -11,11 +11,11 @@ import {
   useRef,
 } from 'react';
 
-import project0 from '../../../assets/project_1.png';
-import project1 from '../../../assets/project_2.png';
-import project2 from '../../../assets/project_3.png';
-import project3 from '../../../assets/project_4.png';
-import project4 from '../../../assets/project_5.png';
+// import project0 from '../../../assets/projects/project_1.png';
+// import project1 from '../../../assets/projects/project_2.png';
+// import project2 from '../../../assets/projects/project_3.png';
+// import project3 from '../../../assets/projects/project_4.png';
+// import project4 from '../../../assets/projects/project_5.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -28,32 +28,32 @@ const carouselContent = [
     id: 0,
     name: 'Informations About Movies',
     description: 'Project name / short description!',
-    url: project0,
+    url: 'https://isthisamovie.netlify.app/',
   },
   {
     id: 1,
 
     name: 'My Resume',
     description: 'Project name / short description!',
-    url: project4,
+    url: 'https://alexandru-boscu-cv.netlify.app/',
   },
   {
     id: 2,
     name: 'Weather App',
     description: 'Project name / short description!',
-    url: project2,
+    url: 'https://weather-with-a-click.netlify.app/',
   },
   {
     id: 3,
     name: 'Tic Tac Toe: Alien Edition',
     description: 'Project name / short description!',
-    url: project3,
+    url: 'https://just-tic-tac-toe.netlify.app/',
   },
   {
     id: 4,
     name: 'Dad Jokes',
     description: 'Project name / short description!',
-    url: project1,
+    url: 'https://jokestomakeyourday.netlify.app/',
   },
 ];
 
