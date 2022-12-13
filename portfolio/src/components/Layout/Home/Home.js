@@ -60,16 +60,25 @@ const Home = () => {
         <div className={classes.social}>
           <ul>
             <li>
-              <FontAwesomeIcon icon={faInstagram} />
+              <FontAwesomeIcon
+                icon={faInstagram}
+                style={{ color: activeColor }}
+              />
             </li>
             <li>
-              <FontAwesomeIcon icon={faGithub} />
+              <FontAwesomeIcon icon={faGithub} style={{ color: activeColor }} />
             </li>
             <li>
-              <FontAwesomeIcon icon={faTelegram} />
+              <FontAwesomeIcon
+                icon={faTelegram}
+                style={{ color: activeColor }}
+              />
             </li>
             <li>
-              <FontAwesomeIcon icon={faTwitter} />
+              <FontAwesomeIcon
+                icon={faTwitter}
+                style={{ color: activeColor }}
+              />
             </li>
           </ul>
         </div>
