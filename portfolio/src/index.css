@@ -32,8 +32,8 @@ html {
   height: 100vh;
   font-family: 'Noto Sans JP', sans-serif;
 
-  /* background: var(--color-0); */
-  background-image: var(--linear-gradient-bg-3);
+  background: var(--color-0);
+  background-image: var(--linear-gradient-bg-4);
 
   overflow-x: hidden;
 }

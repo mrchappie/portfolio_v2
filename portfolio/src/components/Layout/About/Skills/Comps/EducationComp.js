@@ -6,7 +6,8 @@ const EducationComp = (props) => {
     <Fragment>
       <div className={classes.firstRow}>
         <div>
-          {props.education} at <span>{props.institution}</span>
+          {props.education} at{' '}
+          <span style={{ color: props.color }}>{props.institution}</span>
         </div>
       </div>
       <div className={classes.secondRow}>

@@ -73,6 +73,22 @@
     #1a1a1d
   );
 
+  --linear-gradient-bg-4: linear-gradient(
+    to right top,
+    #191a19,
+    #1c241c,
+    #1d2e1f,
+    #1f3821,
+    #1f4324,
+    #224e28,
+    #24592b,
+    #27642e,
+    #2f7232,
+    #398136,
+    #43903a,
+    #4e9f3d
+  );
+
   /* COLORS WITH ALPHA CHANNEL */
 
   /* WHITE WITH ALPHA FROM 0 to 1 with step of 0.5 */

@@ -5,7 +5,8 @@ const WorkComp = (props) => {
   return (
     <Fragment>
       <div className={classes.firstRow}>
-        {props.post} at <span>{props.company}</span>
+        {props.post} at{' '}
+        <span style={{ color: props.color }}>{props.company}</span>
       </div>
       <div className={classes.secondRow}>
         <div>

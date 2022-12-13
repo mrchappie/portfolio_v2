@@ -145,11 +145,13 @@ const Skills = (props) => {
                           specialization={
                             ALEX_INFO.about.education.hightSchool.specialization
                           }
+                          color={activeColor}
                         ></EducationComp>
                       </li>
 
                       <li>
                         <EducationComp
+                          color={activeColor}
                           education={
                             ALEX_INFO.about.education.college.education
                           }
@@ -171,6 +173,7 @@ const Skills = (props) => {
 
                       <li>
                         <EducationComp
+                          color={activeColor}
                           education={ALEX_INFO.about.education.master.education}
                           institution={
                             ALEX_INFO.about.education.master.institution
@@ -198,6 +201,7 @@ const Skills = (props) => {
                     <ul>
                       <li>
                         <WorkComp
+                          color={activeColor}
                           post={ALEX_INFO.about.experience.job1.post}
                           company={ALEX_INFO.about.experience.job1.company}
                           shortDescription={
@@ -215,6 +219,7 @@ const Skills = (props) => {
                       </li>
                       <li>
                         <WorkComp
+                          color={activeColor}
                           post={ALEX_INFO.about.experience.job2.post}
                           company={ALEX_INFO.about.experience.job2.company}
                           shortDescription={
